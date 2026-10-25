@@ -1,0 +1,793 @@
+{
+ "rubric": "每議題比較兩位候選人的「前瞻政見」（不含現任已實施之施政紀錄），無政見者標「無」不計分。8項指標各0–2分：細節4項（對象與範圍、金額或規模、時程、財源）只算候選人本人說過的內容；可行性4項（縣府權責、財政負擔、法規程序、他縣市先例）。財政負擔以2025年決算歲出325.78億元為分母：<0.5%得2、0.5–2%得1、>2%得0，無法估算給1。滿分16；分數衡量政見具體度與執行門檻，非政策好壞。",
+ "issues": [
+  {
+   "issue": "縣府財政與負債",
+   "chen": {
+    "none": false,
+    "proposal": "設「苗栗未來基金」本金10億+N永續留存、以收益支應偏鄉教育等，並推零基預算",
+    "items": [
+     "苗栗未來基金10億+N",
+     "基金治理三層防護",
+     "零基預算與財政透明"
+    ],
+    "scores": {
+     "D1": [
+      1,
+      "收益用途列偏鄉教育、長照、青年、農業，各項受益規模未說明",
+      "https://udn.com/news/story/124652/9743490"
+     ],
+     "D2": [
+      2,
+      "本金「10億+N」，收益至少比照兩年期定存利率",
+      "https://udn.com/news/story/124652/9743490"
+     ],
+     "D3": [
+      0,
+      "未提成立或撥款時程",
+      "https://udn.com/news/story/124652/9743490"
+     ],
+     "D4": [
+      0,
+      "報導未說明10億本金來源",
+      "https://udn.com/news/story/124652/9743490"
+     ],
+     "F1": [
+      1,
+      "設基金需縣議會通過自治條例與預算",
+      "https://udn.com/news/story/124652/9743490"
+     ],
+     "F2": [
+      0,
+      "本金10億÷歲出325.78億≈3.1%（一次撥存，本金保留）",
+      "https://udn.com/news/story/7324/9669875"
+     ],
+     "F3": [
+      1,
+      "需自治條例、議會預算審議，未涉中央修法",
+      "https://udn.com/news/story/7324/9669875"
+     ],
+     "F4": [
+      0,
+      "未查到他縣市設本金永續、收益投資型基金",
+      "https://udn.com/news/story/124652/9743490"
+     ]
+    },
+    "detail": 3,
+    "feas": 2,
+    "total": 5
+   },
+   "chung": {
+    "none": false,
+    "proposal": "創設「苗栗大矽谷永續發展公益信託基金」，以招商稅收提供青年社宅租金補貼",
+    "items": [
+     "大矽谷公益信託基金"
+    ],
+    "scores": {
+     "D1": [
+      1,
+      "對象為青年（社宅租金補貼），人數未說明",
+      "https://www.nownews.com/news/6871825"
+     ],
+     "D2": [
+      0,
+      "未列基金規模或補貼金額",
+      "https://www.nownews.com/news/6871825"
+     ],
+     "D3": [
+      0,
+      "未說明成立時程",
+      "https://www.nownews.com/news/6871825"
+     ],
+     "D4": [
+      2,
+      "稱財源為大矽谷招商稅收（未列提撥比例）",
+      "https://www.nownews.com/news/6871825"
+     ],
+     "F1": [
+      1,
+      "縣府可設立，需縣議會同意",
+      "https://www.nownews.com/news/6871825"
+     ],
+     "F2": [
+      1,
+      "無法估算：基金規模未公布",
+      "https://www.nownews.com/news/6871825"
+     ],
+     "F3": [
+      1,
+      "需議會預算；公益信託另依信託法程序設立",
+      "https://www.nownews.com/news/6871825"
+     ],
+     "F4": [
+      0,
+      "未查到他縣市以招商稅收設青年租屋公益信託",
+      "https://www.nownews.com/news/6871825"
+     ]
+    },
+    "detail": 3,
+    "feas": 3,
+    "total": 6
+   }
+  },
+  {
+   "issue": "長者健保費補助（65歲 vs 80歲）",
+   "chen": {
+    "none": false,
+    "proposal": "65歲以上長者及55歲以上原住民健保費由縣府補助（免繳），經費由縣府承擔",
+    "items": [
+     "65歲以上健保費補助"
+    ],
+    "scores": {
+     "D1": [
+      2,
+      "65歲以上及55歲以上原住民；政見稿稱65歲以上約10.8萬人",
+      "https://udn.com/news/story/124652/9540761"
+     ],
+     "D2": [
+      1,
+      "稱「免繳健保費」，未說明每人上限與年經費",
+      "https://udn.com/vote2026/story/124652/9821175"
+     ],
+     "D3": [
+      1,
+      "稱當選縣長「立即著手推動」，未列具體日期",
+      "https://n.yam.com/Article/20261014117011"
+     ],
+     "D4": [
+      1,
+      "稱經費由縣府承擔／自有預算，未指明哪筆收入",
+      "https://udn.com/vote2026/story/124652/9821175"
+     ],
+     "F1": [
+      2,
+      "縣府可自訂代繳自付保費（他縣市已自辦）",
+      "https://www.businesstoday.com.tw/article/category/183030/post/202606240070/"
+     ],
+     "F2": [
+      0,
+      "約6.8–10.7億／年，占歲出2.1%–3.3%（本站試算推估）",
+      "https://www.businesstoday.com.tw/article/category/183030/post/202606240070/"
+     ],
+     "F3": [
+      1,
+      "需議會預算；非法定社福可能被中央扣補助款",
+      "https://www.cna.com.tw/news/aloc/202408060220.aspx"
+     ],
+     "F4": [
+      2,
+      "南投縣、台北市已補助65歲以上（原住民55歲）",
+      "https://www.businesstoday.com.tw/article/category/183030/post/202606240070/"
+     ]
+    },
+    "detail": 5,
+    "feas": 5,
+    "total": 10
+   },
+   "chung": {
+    "none": false,
+    "proposal": "稱財政許可時一定會逐步實施65歲以上免繳健保費（現行80歲試辦屬施政紀錄，不計入）",
+    "items": [],
+    "scores": {
+     "D1": [
+      1,
+      "目標65歲以上，未說明分階段對象與人數",
+      "https://www.ctee.com.tw/news/20260224701242-431401"
+     ],
+     "D2": [
+      1,
+      "稱「免繳健保費」，未說明每人上限與年經費",
+      "https://www.ctee.com.tw/news/20260224701242-431401"
+     ],
+     "D3": [
+      1,
+      "「財政許可，一定會逐步實施」，無具體年份",
+      "https://www.ctee.com.tw/news/20260224701242-431401"
+     ],
+     "D4": [
+      0,
+      "65歲方案未說明財源（印花稅僅用於80歲試辦）",
+      "https://www.ctee.com.tw/news/20260224701242-431401"
+     ],
+     "F1": [
+      2,
+      "縣府可自訂代繳自付保費（他縣市已自辦）",
+      "https://www.businesstoday.com.tw/article/category/183030/post/202606240070/"
+     ],
+     "F2": [
+      0,
+      "全面65歲約6.8–10.7億／年，占歲出2.1%–3.3%（同陳案）",
+      "https://www.businesstoday.com.tw/article/category/183030/post/202606240070/"
+     ],
+     "F3": [
+      1,
+      "需議會預算；非法定社福可能被中央扣補助款",
+      "https://www.cna.com.tw/news/aloc/202408060220.aspx"
+     ],
+     "F4": [
+      2,
+      "南投縣、台北市已補助65歲以上（原住民55歲）",
+      "https://www.businesstoday.com.tw/article/category/183030/post/202606240070/"
+     ]
+    },
+    "detail": 3,
+    "feas": 5,
+    "total": 8
+   }
+  },
+  {
+   "issue": "生育津貼加碼",
+   "chen": {
+    "none": false,
+    "proposal": "生育津貼第一胎6萬、第二胎8萬、第三胎以上10萬（各含3萬點栗寶卡，6年撥點）",
+    "items": [
+     "生育津貼每胎最高10萬",
+     "栗寶卡6年3萬點"
+    ],
+    "scores": {
+     "D1": [
+      1,
+      "依胎次分級，受益新生兒數未說明",
+      "https://newtalk.tw/news/view/2026-04-02/1027729"
+     ],
+     "D2": [
+      2,
+      "6／8／10萬，現金3／5／7萬＋栗寶卡每年5,000點×6年",
+      "https://newtalk.tw/news/view/2026-04-02/1027729"
+     ],
+     "D3": [
+      0,
+      "未提實施時程",
+      "https://newtalk.tw/news/view/2026-04-02/1027729"
+     ],
+     "D4": [
+      0,
+      "未說明財源",
+      "https://newtalk.tw/news/view/2026-04-02/1027729"
+     ],
+     "F1": [
+      2,
+      "縣府可自訂生育津貼與點數卡",
+      "https://newtalk.tw/news/view/2026-04-02/1027729"
+     ],
+     "F2": [
+      2,
+      "較2025現行增約1.15–1.37億／年，占歲出0.35%–0.42%",
+      "https://udn.com/news/story/7324/9545440"
+     ],
+     "F3": [
+      1,
+      "需議會預算；屬非法定社福支出",
+      "https://www.cna.com.tw/news/aloc/202408060220.aspx"
+     ],
+     "F4": [
+      2,
+      "雲林縣2026年起第3胎以上每胎10萬元",
+      "https://news.pts.org.tw/article/804364"
+     ]
+    },
+    "detail": 3,
+    "feas": 7,
+    "total": 10
+   },
+   "chung": {
+    "none": true,
+    "proposal": "未查到新的生育津貼政見；第二胎以上5萬（2027起）為縣府已決定施政，依網站規則不計入",
+    "items": [],
+    "scores": {},
+    "detail": null,
+    "feas": null,
+    "total": null
+   }
+  },
+  {
+   "issue": "偏鄉小校併校",
+   "chen": {
+    "none": false,
+    "proposal": "廢校為最後手段，優先整合行政資源與空間，推跨校合作、衛星學校與老幼共學",
+    "items": [
+     "小校廢校為最後手段",
+     "校園共學空間"
+    ],
+    "scores": {
+     "D1": [
+      1,
+      "對象為偏鄉小校，未說明校數與學生數",
+      "https://udn.com/news/story/124652/9494054"
+     ],
+     "D2": [
+      0,
+      "未提經費或數量",
+      "https://udn.com/news/story/124652/9494054"
+     ],
+     "D3": [
+      0,
+      "未提時程",
+      "https://udn.com/news/story/124652/9494054"
+     ],
+     "D4": [
+      0,
+      "未提財源",
+      "https://udn.com/news/story/124652/9494054"
+     ],
+     "F1": [
+      2,
+      "國中小設校、整併屬縣府權責",
+      "https://edu.law.moe.gov.tw/LawContent.aspx?id=GL001597"
+     ],
+     "F2": [
+      2,
+      "以維持既有學校為主；一所小校年經費約2,000萬（約0.06%）",
+      "https://udn.com/news/story/6898/8975137"
+     ],
+     "F3": [
+      2,
+      "不停辦學校即無需停辦審議程序",
+      "https://edu.law.moe.gov.tw/LawContent.aspx?id=GL001597"
+     ],
+     "F4": [
+      2,
+      "新竹縣以轉型與區域合作保留小校、暫無整併計畫",
+      "https://udn.com/news/story/6898/8975137"
+     ]
+    },
+    "detail": 1,
+    "feas": 8,
+    "total": 9
+   },
+   "chung": {
+    "none": false,
+    "proposal": "小校併校不強迫、家長無意見才併，併校學生補助交通費",
+    "items": [
+     "小校併校補助交通"
+    ],
+    "scores": {
+     "D1": [
+      1,
+      "對象為小校學生，未來列入評估校數未說明",
+      "https://udn.com/news/story/124652/9492746"
+     ],
+     "D2": [
+      2,
+      "交通費每月5,000元起，2公里以上8,000元、4公里以上1萬元",
+      "https://udn.com/news/story/6898/8975137"
+     ],
+     "D3": [
+      0,
+      "未提時程",
+      "https://udn.com/news/story/124652/9492746"
+     ],
+     "D4": [
+      0,
+      "未提財源",
+      "https://udn.com/news/story/124652/9492746"
+     ],
+     "F1": [
+      2,
+      "國中小整併屬縣府權責",
+      "https://edu.law.moe.gov.tw/LawContent.aspx?id=GL001597"
+     ],
+     "F2": [
+      2,
+      "每校交通補助約54–108萬／年（9人計），遠低於0.5%",
+      "https://udn.com/news/story/6898/8975137"
+     ],
+     "F3": [
+      1,
+      "須專案評估、公聽會、教育審議委員會通過並報教育部備查",
+      "https://edu.law.moe.gov.tw/LawContent.aspx?id=GL001597"
+     ],
+     "F4": [
+      2,
+      "台南、桃園已併校並補助交通費",
+      "https://udn.com/news/story/6898/8975137"
+     ]
+    },
+    "detail": 3,
+    "feas": 7,
+    "total": 10
+   }
+  },
+  {
+   "issue": "廢棄土／土資場",
+   "chen": {
+    "none": false,
+    "proposal": "土資場設置與環保並重，以完整環評控管，依實際統計需求審慎控管數量",
+    "items": [
+     "土資場依需求審慎控管"
+    ],
+    "scores": {
+     "D1": [
+      1,
+      "對象為土資場設置，未提數量上限",
+      "https://news.ltn.com.tw/news/politics/breakingnews/5496689"
+     ],
+     "D2": [
+      0,
+      "未提數量或規模",
+      "https://news.ltn.com.tw/news/politics/breakingnews/5496689"
+     ],
+     "D3": [
+      0,
+      "未提時程",
+      "https://news.ltn.com.tw/news/politics/breakingnews/5496689"
+     ],
+     "D4": [
+      0,
+      "未提財源（屬管制政策）",
+      "https://news.ltn.com.tw/news/politics/breakingnews/5496689"
+     ],
+     "F1": [
+      2,
+      "土資場核准屬縣府權責",
+      "https://soilmove.nlma.gov.tw/files/text3/苗栗縣營建工程剩餘土石方處理及資源堆置處理場設置管理自治條例.pdf"
+     ],
+     "F2": [
+      2,
+      "屬管制措施，無新增大額支出",
+      "https://news.ltn.com.tw/news/politics/breakingnews/5496689"
+     ],
+     "F3": [
+      1,
+      "個案須經環評審查",
+      "https://www.cna.com.tw/news/aloc/202608050247.aspx"
+     ],
+     "F4": [
+      1,
+      "類似：臺北市自治條例訂土資場禁設區與距離限制",
+      "https://laws.gov.taipei/law/LawSearch/LawArticleContent/FL097317"
+     ]
+    },
+    "detail": 1,
+    "feas": 6,
+    "total": 7
+   },
+   "chung": {
+    "none": false,
+    "proposal": "土資場「不但要設而且要廣設」，業者申請時須先辦地方說明會",
+    "items": [
+     "土資場廣設＋先辦說明會"
+    ],
+    "scores": {
+     "D1": [
+      1,
+      "對象為土資場設置，未提處數",
+      "https://udn.com/news/story/124652/9492746"
+     ],
+     "D2": [
+      0,
+      "「廣設」未列數量",
+      "https://udn.com/news/story/124652/9492746"
+     ],
+     "D3": [
+      0,
+      "未提時程",
+      "https://udn.com/news/story/124652/9492746"
+     ],
+     "D4": [
+      0,
+      "未提財源（土資場多為民營）",
+      "https://udn.com/news/story/124652/9492746"
+     ],
+     "F1": [
+      2,
+      "土資場核准屬縣府權責",
+      "https://soilmove.nlma.gov.tw/files/text3/苗栗縣營建工程剩餘土石方處理及資源堆置處理場設置管理自治條例.pdf"
+     ],
+     "F2": [
+      2,
+      "屬管制措施，無新增大額支出",
+      "https://udn.com/news/story/124652/9492746"
+     ],
+     "F3": [
+      1,
+      "個案須經環評審查",
+      "https://www.cna.com.tw/news/aloc/202608050247.aspx"
+     ],
+     "F4": [
+      1,
+      "類似：台中港2026-07啟動土方收容，擴大處理容量",
+      "https://udn.com/news/story/7324/9602813"
+     ]
+    },
+    "detail": 1,
+    "feas": 6,
+    "total": 7
+   }
+  },
+  {
+   "issue": "科學園區／大矽谷與中央對接",
+   "chen": {
+    "none": false,
+    "proposal": "對接行政院大矽谷方案，先盤點土地、水電、交通與公設再向中央提需求，並積極招商",
+    "items": [
+     "對接桃竹苗大矽谷",
+     "盤點土地水電交通",
+     "積極招商與產業合作"
+    ],
+    "scores": {
+     "D1": [
+      1,
+      "列出盤點項目（土地、水、電、交通），範圍未量化",
+      "https://newtalk.tw/news/view/2026-09-10/1058795"
+     ],
+     "D2": [
+      0,
+      "未提面積、金額或投資額",
+      "https://news.ltn.com.tw/news/politics/breakingnews/5495023"
+     ],
+     "D3": [
+      0,
+      "未提時程",
+      "https://news.ltn.com.tw/news/politics/breakingnews/5495023"
+     ],
+     "D4": [
+      1,
+      "向中央提出需求、爭取中央資源",
+      "https://newtalk.tw/news/view/2026-09-10/1058795"
+     ],
+     "F1": [
+      1,
+      "盤點、招商縣府可做；園區開發由國科會主導",
+      "https://www.ey.gov.tw/Page/9277F759E41CCD91/d9c68e7a-af24-4519-bcf8-5161e8a7ed76"
+     ],
+     "F2": [
+      2,
+      "盤點與對接屬行政作業，無新增大額支出",
+      "https://newtalk.tw/news/view/2026-09-10/1058795"
+     ],
+     "F3": [
+      0,
+      "與鍾案同以最終目標計：園區擴建需國土變更、環評及中央核定",
+      "https://newtalk.tw/news/view/2026-09-10/1058795"
+     ],
+     "F4": [
+      1,
+      "類似：桃園龍潭擴建由國科會與地方合作，尚在環評",
+      "https://ec.ltn.com.tw/article/breakingnews/5577037"
+     ]
+    },
+    "detail": 2,
+    "feas": 4,
+    "total": 6
+   },
+   "chung": {
+    "none": false,
+    "proposal": "配合大矽谷方案推動後龍產業園區及竹南、頭份、銅鑼科學園區擴大，落實苗栗人優先就業",
+    "items": [
+     "支持桃竹苗大矽谷",
+     "擴大後龍與竹南頭份園區",
+     "苗栗人優先就業",
+     "一投資一專案服務"
+    ],
+    "scores": {
+     "D1": [
+      1,
+      "列出後龍、竹南、頭份、銅鑼園區，面積與就業數未說明",
+      "https://udn.com/news/story/7324/9634520"
+     ],
+     "D2": [
+      0,
+      "未提面積、金額或就業名額",
+      "https://udn.com/news/story/7324/9634520"
+     ],
+     "D3": [
+      0,
+      "未提時程",
+      "https://udn.com/news/story/7324/9634520"
+     ],
+     "D4": [
+      1,
+      "稱配合中央大矽谷方案，未說明縣府出資",
+      "https://udn.com/news/story/7324/9634520"
+     ],
+     "F1": [
+      1,
+      "後龍產業園區縣府可推；科學園區擴建由國科會主導",
+      "https://www.ey.gov.tw/Page/9277F759E41CCD91/d9c68e7a-af24-4519-bcf8-5161e8a7ed76"
+     ],
+     "F2": [
+      1,
+      "無法估算：擴建區開發經費與縣府分攤未公開",
+      "https://www.ey.gov.tw/Page/9277F759E41CCD91/d9c68e7a-af24-4519-bcf8-5161e8a7ed76"
+     ],
+     "F3": [
+      0,
+      "須國土計畫土地變更、環評及中央核定",
+      "https://ec.ltn.com.tw/article/breakingnews/5577037"
+     ],
+     "F4": [
+      1,
+      "類似：桃園龍潭擴建約104公頃，尚在環評",
+      "https://ec.ltn.com.tw/article/breakingnews/5577037"
+     ]
+    },
+    "detail": 2,
+    "feas": 3,
+    "total": 5
+   }
+  },
+  {
+   "issue": "頭份竹南交通壅塞",
+   "chen": {
+    "none": false,
+    "proposal": "國1頭份增設第二交流道、楊梅–頭份拓寬延伸至銅鑼、爭取房裡匝道，並發展竹科通勤大眾運輸",
+    "items": [
+     "頭份第二交流道",
+     "國1拓寬延伸至銅鑼",
+     "竹科通勤大眾運輸",
+     "台61房裡交流道匝道"
+    ],
+    "scores": {
+     "D1": [
+      1,
+      "路段與地點明確，工程規模未量化",
+      "https://udn.com/news/story/124652/9635125"
+     ],
+     "D2": [
+      0,
+      "未提經費或里程",
+      "https://udn.com/news/story/124652/9635125"
+     ],
+     "D3": [
+      1,
+      "房裡匝道稱「爭取加速興建」，無年份",
+      "https://n.yam.com/Article/20261014117011"
+     ],
+     "D4": [
+      1,
+      "以爭取中央為主，未說明縣府配合款",
+      "https://n.yam.com/Article/20261014117011"
+     ],
+     "F1": [
+      0,
+      "國道、省道工程由交通部高公局、公路局主辦，縣府為爭取與配合",
+      "https://news.ltn.com.tw/news/life/breakingnews/5418024"
+     ],
+     "F2": [
+      1,
+      "無法完整估算；若頭份連絡道逾30億、比照湖口地方負擔2成≈6億（約1.8%，分年）",
+      "https://udn.com/news/story/7324/9380876"
+     ],
+     "F3": [
+      0,
+      "需中央核定建設計畫，頭份連絡道另需內政部都委會審議",
+      "https://udn.com/news/story/7324/9380876"
+     ],
+     "F4": [
+      1,
+      "類似：新竹縣湖口第二交流道2026-05高公局有條件通過，尚未完工",
+      "https://udn.com/news/story/7324/9483499"
+     ]
+    },
+    "detail": 3,
+    "feas": 2,
+    "total": 5
+   },
+   "chung": {
+    "none": false,
+    "proposal": "國1頭份交流道改善與造橋交流道、台61竹南–後龍高架化、台72延伸，呼籲中央加速五楊高架延伸頭份",
+    "items": [
+     "國1頭份交流道改善",
+     "增設造橋交流道",
+     "台61竹南–後龍高架化",
+     "房裡交流道改善",
+     "台72延伸接台61",
+     "五楊高架延伸頭份"
+    ],
+    "scores": {
+     "D1": [
+      1,
+      "路段與地點明確，工程規模未量化",
+      "https://udn.com/news/story/7324/9634520"
+     ],
+     "D2": [
+      0,
+      "未提經費或里程",
+      "https://udn.com/news/story/7324/9634520"
+     ],
+     "D3": [
+      1,
+      "稱連任後呼籲中央「加速」、第二交流道「同步動工」，無年份",
+      "https://www.nownews.com/news/6851670"
+     ],
+     "D4": [
+      1,
+      "以呼籲、爭取中央為主，未說明縣府配合款",
+      "https://www.nownews.com/news/6851670"
+     ],
+     "F1": [
+      0,
+      "國道、省道工程由交通部高公局、公路局主辦，縣府為爭取與配合",
+      "https://news.ltn.com.tw/news/life/breakingnews/5418024"
+     ],
+     "F2": [
+      1,
+      "無法完整估算；若頭份連絡道逾30億、比照湖口地方負擔2成≈6億（約1.8%，分年）",
+      "https://udn.com/news/story/7324/9380876"
+     ],
+     "F3": [
+      0,
+      "需中央核定建設計畫，頭份連絡道另需內政部都委會審議",
+      "https://udn.com/news/story/7324/9380876"
+     ],
+     "F4": [
+      1,
+      "類似：新竹縣湖口第二交流道2026-05高公局有條件通過，尚未完工",
+      "https://udn.com/news/story/7324/9483499"
+     ]
+    },
+    "detail": 3,
+    "feas": 2,
+    "total": 5
+   }
+  },
+  {
+   "issue": "醫療資源",
+   "chen": {
+    "none": true,
+    "proposal": "未查到醫療院所量能的前瞻政見；主張苗栗醫院急重症大樓21億為其爭取（屬功勞主張，非政見）",
+    "items": [],
+    "scores": {},
+    "detail": null,
+    "feas": null,
+    "total": null
+   },
+   "chung": {
+    "none": false,
+    "proposal": "後龍醫療園區15公頃設中型重症醫院、大千竹南分院補足兒童／燒燙傷／安寧病房、引進醫學中心資源",
+    "items": [
+     "核心醫療產業園區",
+     "大千竹南分院",
+     "縣立長照醫養家園",
+     "引進醫學中心資源"
+    ],
+    "scores": {
+     "D1": [
+      1,
+      "列出中型重症醫院及兒童、燒燙傷、安寧病房，床數未說明",
+      "https://udn.com/news/story/7324/9538496"
+     ],
+     "D2": [
+      1,
+      "提及園區尚有15公頃，未提床數或經費",
+      "https://udn.com/news/story/7324/9538496"
+     ],
+     "D3": [
+      1,
+      "引進醫學中心列為「未來10年」願景",
+      "https://www.nownews.com/news/6871825"
+     ],
+     "D4": [
+      0,
+      "未說明財源",
+      "https://udn.com/news/story/7324/9634520"
+     ],
+     "F1": [
+      1,
+      "縣府可招商；醫院由民間投資，需院方配合",
+      "https://udn.com/news/story/7324/9538496"
+     ],
+     "F2": [
+      1,
+      "無法估算：未公布縣府出資",
+      "https://udn.com/news/story/7324/9538496"
+     ],
+     "F3": [
+      1,
+      "依BOT招商、都計與醫院設立許可等程序",
+      "https://udn.com/news/story/7324/9538496"
+     ],
+     "F4": [
+      2,
+      "台南市立安南醫院以BOT由中國醫藥大學附設醫院經營",
+      "https://www.cna.com.tw/news/ahel/202211180314.aspx"
+     ]
+    },
+    "detail": 3,
+    "feas": 5,
+    "total": 8
+   }
+  }
+ ]
+}

@@ -7,7 +7,7 @@ for c in d['candidates']:
         if t['category'] not in CATS: CATS.append(t['category'])
 used = [k for k in CATS if any(t['category']==k for c in d['candidates'] for t in c['themes'])]
 import os
-SP='./factcheck/'
+SP='/private/tmp/claude-501/-Users-matt-Claude---/13d2d7a1-379a-4d10-974a-fe0b1891991f/scratchpad/'
 if os.path.exists('feasibility.json') or os.path.exists(SP+'feasibility.json'):
     f=json.load(open('feasibility.json' if os.path.exists('feasibility.json') else SP+'feasibility.json'))
     for e in f['items']:
@@ -15,6 +15,7 @@ if os.path.exists('feasibility.json') or os.path.exists(SP+'feasibility.json'):
         it['chk']={k:e[k] for k in ['amount','timeline','funding','authority','progress'] if k in e}
 if os.path.exists('issues_deep.json') or os.path.exists(SP+'issues_deep.json'):
     d['deep']=json.load(open('issues_deep.json' if os.path.exists('issues_deep.json') else SP+'issues_deep.json'))
+if os.path.exists('issue_scores.json'): d['scores']=json.load(open('issue_scores.json'))
 d.setdefault('footnote', '本頁非任何候選人或政黨官方網站。政見整理自公開報導與競選發言，截至 2026-10-24；以候選人正式選舉公報為準。')
 html = open('template.html').read().replace('/*DATA*/null', json.dumps(d, ensure_ascii=False)).replace('/*CATS*/[]', json.dumps(used, ensure_ascii=False))
 open('index.html','w').write(html)

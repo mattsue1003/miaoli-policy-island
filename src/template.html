@@ -168,10 +168,25 @@ button{font:inherit;color:inherit;cursor:pointer}
 .math td.v{font-family:var(--f-mono);font-variant-numeric:tabular-nums;text-align:right;width:46%}
 .math td a{color:var(--ink-2);font-family:var(--f-mono);font-size:10.5px}
 .math .f{padding:8px 12px;font-family:var(--f-mono);font-size:12px;border-top:1px solid var(--line);color:var(--ink-2);word-break:break-all}
+.sc-head{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sc-head>div{min-width:0;padding:10px 12px;border-radius:12px}.sc-head .chen{background:var(--chen-soft)}.sc-head .chung{background:var(--chung-soft)}
+.sc-head .who{display:block;font-family:var(--f-display);font-weight:700;font-size:15px}.sc-head .chen .who{color:var(--chen)}.sc-head .chung .who{color:var(--chung)}
+.sc-tot{font-family:var(--f-mono);font-size:28px;font-variant-numeric:tabular-nums}.sc-tot small{font-size:13px;color:var(--ink-2)}
+.sc-sub{display:block;font-size:12px;color:var(--ink-2)}.sc-none{display:block;font-size:13px;color:var(--ink-2);padding:8px 0}
+.sc-head p{margin:6px 0 0;font-size:12.5px;line-height:1.6;color:var(--ink)}
+.sc-bar{display:block;height:8px;border-radius:99px;background:var(--panel);margin-top:6px;overflow:hidden}.sc-bar i{display:block;height:100%;border-radius:99px}.sc-bar i.chen{background:var(--chen)}.sc-bar i.chung{background:var(--chung)}
+.sc-table{width:100%;min-width:560px;border-collapse:collapse;font-size:12.5px;margin-top:10px}
+.sc-table th{text-align:left;padding:6px 8px;font-family:var(--f-display);font-size:14px}.sc-table th.chen{color:var(--chen)}.sc-table th.chung{color:var(--chung)}
+.sc-table tr.grp th{background:var(--mist);font-size:13px;border-radius:6px}
+.sc-table td{padding:7px 8px;border-top:1px solid var(--line);vertical-align:top}.sc-l{font-weight:700;white-space:nowrap;width:90px}
+.sc-c{display:table-cell}.sc-c .ev{color:var(--ink-2);line-height:1.55}.sc-c.none{color:var(--ink-2)}
+.pt{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;font-family:var(--f-mono);font-size:11.5px;font-weight:700;margin-right:6px;vertical-align:-4px;border:1.5px solid var(--ink)}
+.pt.p2{background:var(--ink);color:var(--paper)}.pt.p1{background:color-mix(in srgb,var(--ink) 22%,transparent)}.pt.p0{color:var(--ink-2);border-color:var(--line)}
 .deep ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.7}
 .deep ul a{color:var(--ink-2);font-family:var(--f-mono);font-size:10.5px;margin-left:4px}
 .ask li{margin-bottom:4px}
 .issue-btn{display:block;width:100%;text-align:left;border:0;background:transparent;padding:12px 8px;border-bottom:1px solid var(--line);border-radius:10px}
+.iss-sc{display:flex;gap:6px;align-items:center;margin:4px 0 2px;font-size:12px}.iss-sc i{font-style:normal;font-weight:700;padding:1px 8px;border-radius:99px;color:#fff}.iss-sc i.chen{background:var(--chen)}.iss-sc i.chung{background:var(--chung)}.iss-sc em{font-style:normal;color:var(--ink-2)}
 .issue-btn:hover{background:var(--mist)} .issue-btn b{font-family:var(--f-display);font-size:16.5px;display:block} .issue-btn small{color:var(--ink-2);font-size:12px;line-height:1.5;display:block;margin-top:2px}
 .openboard{width:100%;border:0;background:var(--ink);color:var(--paper);border-radius:12px;padding:10px;font-weight:700;margin:8px 0 6px}
 .note{font-size:11.5px;color:var(--ink-2);line-height:1.6;padding:12px 8px 0}
@@ -244,6 +259,7 @@ button{font:inherit;color:inherit;cursor:pointer}
   .board{left:0;right:0;top:0;bottom:0;border-radius:0;padding-top:env(safe-area-inset-top,0px)}
   .board-head,.board-tools,.board-body{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
   .sides{grid-template-columns:1fr}
+  .sc-head{grid-template-columns:1fr}
   .foot{display:none}
   .brand{padding:10px 12px} .brand h1{font-size:22px} .brand p{display:none}
   .isle-name{font-size:16px}
@@ -1835,6 +1851,23 @@ function renderTable(){
   $('#board-body').innerHTML = sum + `<div style="overflow-x:auto"><table class="ctable"><thead><tr><th>議題</th><th class="chen">陳品安・${esc(DATA.candidates[0].party)}</th><th class="chung">鍾東錦・${esc(DATA.candidates[1].party)}</th></tr></thead><tbody>${html}</tbody></table></div>
     <p class="legend">同一列是同一個議題，左右對照；空白代表該候選人在公開資料中沒有針對這個議題提出政見。</p>` + LEGEND;
 }
+const CRIT = [['D1','對象與範圍','細節'],['D2','金額或規模','細節'],['D3','時程','細節'],['D4','財源','細節'],['F1','縣府權責','可行性'],['F2','財政負擔','可行性'],['F3','法規與程序','可行性'],['F4','他縣市先例','可行性']];
+const scoreOf = name => (DATA.scores?.issues || []).find(x => x.issue === name || x.issue.includes(name.slice(0,4)) || name.includes(x.issue.slice(0,4)));
+function scoreCard(name){
+  const s = scoreOf(name); if(!s) return '';
+  const side = k => s[k] || {none:true};
+  const tot = k => side(k).none ? '<span class="sc-none">未提出具體主張</span>' : `<b class="sc-tot">${side(k).total}<small>/16</small></b><span class="sc-sub">細節 ${side(k).detail}/8・可行性 ${side(k).feas}/8</span>`;
+  const bar = k => side(k).none ? '' : `<span class="sc-bar"><i class="${k}" style="width:${side(k).total/16*100}%"></i></span>`;
+  const cell = (k, c) => { const v = side(k); if(v.none) return '<td class="sc-c none">—</td>'; const x = v.scores?.[c] || [0,'']; return `<td class="sc-c"><span class="pt p${x[0]}">${x[0]}</span><span class="ev">${esc(x[1] || '')}${x[2] ? ' '+srcLink(x[2]) : ''}</span></td>`; };
+  return `<h4>評分卡（同一把尺，每項 0–2 分）</h4>
+    <div class="sc-head"><div class="chen"><span class="who">陳品安</span>${tot('chen')}${bar('chen')}${side('chen').proposal ? `<p>${esc(side('chen').proposal)}</p>` : ''}</div>
+      <div class="chung"><span class="who">鍾東錦</span>${tot('chung')}${bar('chung')}${side('chung').proposal ? `<p>${esc(side('chung').proposal)}</p>` : ''}</div></div>
+    <div style="overflow-x:auto"><table class="sc-table"><thead><tr><th>指標</th><th class="chen">陳品安</th><th class="chung">鍾東錦</th></tr></thead><tbody>
+      ${CRIT.map(([c,l,g],k) => `${k===0||k===4 ? `<tr class="grp"><th colspan="3">${g}</th></tr>` : ''}<tr><td class="sc-l">${l}</td>${cell('chen',c)}${cell('chung',c)}</tr>`).join('')}
+    </tbody></table></div>
+    <details class="legend"><summary><b>評分標準</b></summary><p>${esc(DATA.scores.rubric || '')}</p>
+      <p>細節：對象與範圍（誰、多少人）、金額或規模、時程、財源，候選人自己講得越清楚分數越高。可行性：縣府權責（縣府自己能決定 2、需配合 1、主要靠中央 0）、財政負擔（占縣府年度歲出 &lt;0.5% 為 2、0.5–2% 為 1、&gt;2% 為 0，無法估算給 1）、法規與程序（不需修法 2、一般審議 1、需中央修法或核定 0）、他縣市先例（已有實施 2、類似 1、無 0）。只評政見，不計現任者已執行的施政；未提出主張者不給分。分數不代表政策好壞。</p></details>`;
+}
 function renderIssue(i){
   const base = DATA.issues[i], d = (DATA.deep?.issues || []).find(x => x.issue === base.issue || x.issue.includes(base.issue.slice(0,4)) || base.issue.includes(x.issue.slice(0,4)));
   $('#board-eyebrow').textContent = `爭點 ${i+1} / ${DATA.issues.length}`; $('#board-title').textContent = base.issue;
@@ -1843,6 +1876,7 @@ function renderIssue(i){
   if(!d){ $('#board-body').innerHTML = `<div class="deep"><p style="line-height:1.7">${esc(base.summary)}</p><ul>${(base.sources||[]).map(u => `<li>${link(u)}</li>`).join('')}</ul></div>`; return; }
   const m = d.math;
   $('#board-body').innerHTML = `<div class="deep">
+    ${scoreCard(base.issue)}
     <h4>雙方說法</h4><div class="sides"><div class="chen"><b>陳品安</b>${esc(d.sides?.chen || '—')}</div><div class="chung"><b>鍾東錦</b>${esc(d.sides?.chung || '—')}</div></div>
     ${(d.sides?.sources||[]).length ? `<p class="note" style="padding:6px 0 0">來源：${d.sides.sources.map(u => link(u)).join('、')}</p>` : ''}
     ${m ? `<h4>算給你看</h4><div class="math"><div class="sum">${esc(m.summary || '')}</div><table>${(m.rows||[]).map(r => `<tr><td>${esc(r.label)}${r.year ? `（${esc(r.year)}）` : ''}${link(r.source)}</td><td class="v">${r.value == null ? '資料不足' : esc(r.value)}</td></tr>`).join('')}</table>
@@ -1874,7 +1908,8 @@ function renderTree(){
         <span class="pip ${a?'chen':'none'}" title="陳品安 ${a} 項">${a||'–'}</span><span class="pip ${b?'chung':'none'}" title="鍾東錦 ${b} 項">${b||'–'}</span></button>`; }).join('')
       + `<p class="note">數字是該領域的政見細項數（只計公開提出的政見，不含現任者已執行的施政）。「–」表示公開資料中暫未找到。項目多寡只反映已公開內容的多寡，不代表政策優劣。</p>`;
   } else if(tab==='issues'){
-    tree.innerHTML = DATA.issues.map((i,k)=>`<button class="issue-btn" data-issue-open="${k}"><b>${esc(i.issue)}</b><small>${esc((DATA.deep?.issues||[]).find(x=>x.issue===i.issue)?.math?.summary || i.summary.slice(0,60)+'…')}</small></button>`).join('')
+    tree.innerHTML = DATA.issues.map((i,k)=>{ const s = scoreOf(i.issue), v = c => !s || s[c]?.none ? '–' : s[c].total;
+      return `<button class="issue-btn" data-issue-open="${k}"><b>${esc(i.issue)}</b>${s ? `<span class="iss-sc"><i class="chen">陳 ${v('chen')}</i><i class="chung">鍾 ${v('chung')}</i><em>/16</em></span>` : ''}<small>${esc((DATA.deep?.issues||[]).find(x=>x.issue===i.issue)?.math?.summary || i.summary.slice(0,60)+'…')}</small></button>`; }).join('')
       + `<p class="note">點一個爭點，看雙方說法、成本試算、卡關點與可以追問的問題。</p>`;
   } else { const ci = tab==='chen'?0:1, c = DATA.candidates[ci], b = c.bio;
     tree.innerHTML = `<div class="bio"><b style="color:var(--${KEYS[ci]})">${esc(c.name)}</b>｜${esc(c.party)}<br>${esc(b.born)}<br>${esc(b.education)}<ul>${b.experience.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>${(b.sources||[]).length ? `<div style="margin-top:4px;font-size:11px">資料來源：${b.sources.map(u => srcLink(u)).join('、')}</div>` : ''}
