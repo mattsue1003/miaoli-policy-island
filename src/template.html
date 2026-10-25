@@ -152,6 +152,8 @@ button{font:inherit;color:inherit;cursor:pointer}
 .chk span.p{background:color-mix(in srgb,var(--ink) 18%,transparent);color:var(--ink);border-color:color-mix(in srgb,var(--ink) 40%,transparent)}
 .item details{margin-top:6px} .item summary{font-size:11.5px;color:var(--ink-2);cursor:pointer}
 .item details ul{margin:6px 0 0;padding-left:16px;font-size:12px;color:var(--ink-2);line-height:1.6}
+.ai-note{font-size:12px;line-height:1.7;padding:10px 12px;border-radius:12px;background:color-mix(in srgb,var(--gold) 14%,transparent);border:1px solid color-mix(in srgb,var(--gold) 45%,transparent);margin:12px 0 0}
+.ai-note b{color:var(--ink)}
 .legend{font-size:12px;color:var(--ink-2);line-height:1.7;padding:12px 0 0}
 .legend b{color:var(--ink)}
 .deep{max-width:860px}
@@ -1789,6 +1791,7 @@ function renderThemeCard(ci, ti){
     <p class="lede"><span class="chip">${esc(th.category)}</span><span class="chip">${th.items.length} 個細項</span>${isRecord(th)?'<span class="chip">已實施／施政紀錄</span>':''}</p>
     ${isRecord(th) ? `<p class="prog" style="margin:0 0 6px">標「施政紀錄」的項目是現任縣長任內已推動的政策，不是新承諾；部分數字為縣府自述。非現任候選人沒有可對應的施政紀錄，請勿直接相比。</p>` : ''}
     ${th.items.map(itemHTML).join('')}
+    <p class="note" style="padding:8px 0 0">「具體度」檢核由 AI 依固定標準判斷，附依據與出處，不代表製作者偏好。</p>
     <button class="jump" data-cat="${esc(th.category)}">對照：${esc(DATA.candidates[1-ci].name)}在「${esc(th.category)}」${other.length? '提了 '+other.reduce((s,[x])=>s+x.items.filter(it=>!isRecItem(it)).length,0)+' 項新政見'+(other.some(([x])=>isRecord(x))?'（另有施政紀錄）':'')+' →' : '目前沒有對應主題 →'}</button>`;
   $('#card').hidden = false; $('#card-content').scrollTop = 0;
 }
@@ -1816,7 +1819,8 @@ function openBoard(mode, arg){ boardMode = mode; $('#board').hidden = false; $('
 function closeBoard(){ $('#board').hidden = true; boardMode = null; }
 $('#board-close').onclick = closeBoard;
 addEventListener('keydown', e => { if(e.key === 'Escape' && !$('#board').hidden) closeBoard(); });
-const LEGEND = `<div class="legend"><b>具體度 ●●●○</b> 只看政見本身講得多具體，共四項：有沒有<b>具體金額</b>、<b>時程</b>、<b>財源</b>，以及是否屬<b>縣府權責</b>（不需中央或其他機關點頭）。實心＝有，半實心＝部分，空心＝未提及或需他人配合。<b>不評政策好壞。</b><br><b>比較原則：</b>只比較兩位候選人公開提出的政見；現任者任內已執行的施政不列入，也不顯示執行進度，讓兩人站在同一個基準上。</div>`;
+const AI_NOTE = `<div class="ai-note">評分方式說明：本站的「具體度」「積極度」與「爭點評分卡」皆由 AI 依事先訂好的固定標準，根據公開報導逐項判斷產生，並附上每一分的依據與出處；<b>不是網站製作者的個人喜好或政治立場</b>，也不代表政策好壞。AI 判斷可能有誤，歡迎依出處檢核並回報。</div>`;
+const LEGEND = `${AI_NOTE}<div class="legend"><b>具體度 ●●●○</b> 只看政見本身講得多具體，共四項：有沒有<b>具體金額</b>、<b>時程</b>、<b>財源</b>，以及是否屬<b>縣府權責</b>（不需中央或其他機關點頭）。實心＝有，半實心＝部分，空心＝未提及或需他人配合。<b>不評政策好壞。</b><br><b>比較原則：</b>只比較兩位候選人公開提出的政見；現任者任內已執行的施政不列入，也不顯示執行進度，讓兩人站在同一個基準上。</div>`;
 function activity(){
   const rows = DATA.topics.flatMap(a => a.rows.map(r => ({...r, area:a.area}))).filter(r => r.chen.length || r.chung.length);
   const items = ci => DATA.candidates[ci].themes.flatMap(t => t.items), avg = ci => { const xs = items(ci).map(chkScore).filter(x => x != null); return xs.length ? xs.reduce((s,x)=>s+x,0)/xs.length : 0; };
@@ -1837,7 +1841,7 @@ function renderTable(){
     ${statRow('只有自己提出的議題', A.onlyChen, A.onlyChung, Math.max(A.onlyChen, A.onlyChung))}
     ${statRow('政見細項數', A.nChen, A.nChung, Math.max(A.nChen, A.nChung))}
     ${statRow('平均具體度（滿分 4）', A.avgChen, A.avgChung, 4, x => x.toFixed(1))}
-    <p class="note" style="padding:6px 0 0">雙方都有提出的議題 ${A.both} 個。只比較公開提出的政見，不納入現任者已執行的施政；數量多寡反映公開提出的政見多寡，不代表政策好壞。</p></section>`;
+    <p class="note" style="padding:6px 0 0">雙方都有提出的議題 ${A.both} 個。積極度與具體度由 AI 依固定標準計算（見下方說明），不代表製作者偏好。只比較公開提出的政見，不納入現任者已執行的施政；數量多寡反映公開提出的政見多寡，不代表政策好壞。</p></section>`;
   const item = id => { const [ci,ti,ii] = id.split('.').map(Number), it = DATA.candidates[ci].themes[ti].items[ii], [tg, cls] = basisTag(it);
     return `<button class="ci" data-ci="${ci}" data-ti="${ti}"><span class="tt">${esc(it.title)}</span>${dotsHTML(it)}<span class="tg ${cls}">${tg}</span></button>`; };
   let html = '';
@@ -1859,7 +1863,7 @@ function scoreCard(name){
   const tot = k => side(k).none ? '<span class="sc-none">未提出具體主張</span>' : `<b class="sc-tot">${side(k).total}<small>/16</small></b><span class="sc-sub">細節 ${side(k).detail}/8・可行性 ${side(k).feas}/8</span>`;
   const bar = k => side(k).none ? '' : `<span class="sc-bar"><i class="${k}" style="width:${side(k).total/16*100}%"></i></span>`;
   const cell = (k, c) => { const v = side(k); if(v.none) return '<td class="sc-c none">—</td>'; const x = v.scores?.[c] || [0,'']; return `<td class="sc-c"><span class="pt p${x[0]}">${x[0]}</span><span class="ev">${esc(x[1] || '')}${x[2] ? ' '+srcLink(x[2]) : ''}</span></td>`; };
-  return `<h4>評分卡（同一把尺，每項 0–2 分）</h4>
+  return `<h4>評分卡（同一把尺，每項 0–2 分）</h4><p class="note" style="padding:0 0 8px">由 AI 依固定標準評分，每一分附依據與出處；不是製作者的個人喜好，也不代表政策好壞。</p>
     <div class="sc-head"><div class="chen"><span class="who">陳品安</span>${tot('chen')}${bar('chen')}${side('chen').proposal ? `<p>${esc(side('chen').proposal)}</p>` : ''}</div>
       <div class="chung"><span class="who">鍾東錦</span>${tot('chung')}${bar('chung')}${side('chung').proposal ? `<p>${esc(side('chung').proposal)}</p>` : ''}</div></div>
     <div style="overflow-x:auto"><table class="sc-table"><thead><tr><th>指標</th><th class="chen">陳品安</th><th class="chung">鍾東錦</th></tr></thead><tbody>
@@ -1885,7 +1889,7 @@ function renderIssue(i){
     ${(d.precedent||[]).length ? `<h4>其他縣市怎麼做</h4><ul>${d.precedent.map(b => `<li>${esc(b.text)}${link(b.source)}</li>`).join('')}</ul>` : ''}
     ${(d.askThem||[]).length ? `<h4>可以追問候選人</h4><ul class="ask">${d.askThem.map(q => `<li>${esc(q)}</li>`).join('')}</ul>` : ''}
     ${DATA.deep?.methodology ? `<p class="legend"><b>估算方法：</b>${esc(DATA.deep.methodology)}</p>` : ''}
-    <p class="legend">本頁不判定政見是否「空頭支票」，只把數字、權責與限制攤開，讓你自己判斷。</p></div>`;
+    <p class="legend">本頁不判定政見是否「空頭支票」，只把數字、權責與限制攤開，讓你自己判斷。</p>${AI_NOTE}</div>`;
 }
 $('#board').addEventListener('click', e => {
     const bo = e.target.closest('[data-both]'); if(bo){ onlyBoth = bo.dataset.both === '1'; renderTable(); return; }
