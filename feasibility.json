@@ -430,8 +430,8 @@
     "https://www.storm.mg/article/5298174"
    ],
    "timeline": [
-    "partial",
-    "候選人未提；楊頭段官方預計約2032年完工",
+    "no",
+    "候選人未提（參考：楊頭段官方預計約2032年完工）",
     "https://www.storm.mg/article/5298174"
    ],
    "funding": [
@@ -480,13 +480,13 @@
    "i": 3,
    "title": "台61房裡交流道匝道",
    "amount": [
-    "partial",
-    "候選人未提；可研估9.4億",
+    "no",
+    "候選人未提（參考：可研估9.4億）",
     "https://udn.com/news/story/7324/9320113"
    ],
    "timeline": [
-    "partial",
-    "候選人未提；官方預計2031年完工",
+    "no",
+    "候選人未提（參考：官方預計2031年完工）",
     "https://udn.com/news/story/7324/9320113"
    ],
    "funding": [
@@ -1586,13 +1586,13 @@
    "i": 2,
    "title": "天花湖水庫",
    "amount": [
-    "partial",
-    "候選人未提；水利署估約400億",
+    "no",
+    "候選人未提（參考：水利署估約400億）",
     "https://udn.com/news/story/7238/9194822"
    ],
    "timeline": [
-    "partial",
-    "候選人未提；水利署稱核定後8–10年",
+    "no",
+    "候選人未提（參考：水利署稱核定後8–10年）",
     "https://udn.com/news/story/7238/9194822"
    ],
    "funding": [
@@ -1699,18 +1699,18 @@
    "i": 0,
    "title": "台61竹南–後龍立體化",
    "amount": [
-    "partial",
-    "候選人未提；苗栗第五標約36.55億",
+    "no",
+    "候選人未提（參考：苗栗第五標約36.55億）",
     "https://udn.com/news/story/7324/9526160"
    ],
    "timeline": [
-    "partial",
-    "候選人未提；第五標預計2029完工",
+    "no",
+    "候選人未提（參考：第五標預計2029完工）",
     "https://udn.com/news/story/7324/9526160"
    ],
    "funding": [
-    "partial",
-    "候選人未提；中央公路局計畫"
+    "no",
+    "候選人未提（參考：中央公路局計畫）"
    ],
    "authority": [
     "no",
@@ -1728,18 +1728,18 @@
    "i": 1,
    "title": "房裡交流道改善",
    "amount": [
-    "partial",
-    "候選人未提；可研估9.4億",
+    "no",
+    "候選人未提（參考：可研估9.4億）",
     "https://udn.com/news/story/7324/9320113"
    ],
    "timeline": [
-    "partial",
-    "候選人未提；官方預計2031年完工",
+    "no",
+    "候選人未提（參考：官方預計2031年完工）",
     "https://udn.com/news/story/7324/9320113"
    ],
    "funding": [
-    "partial",
-    "候選人未提；公路局計畫"
+    "no",
+    "候選人未提（參考：公路局計畫）"
    ],
    "authority": [
     "no",
@@ -1757,18 +1757,18 @@
    "i": 2,
    "title": "台72延伸接台61",
    "amount": [
-    "partial",
-    "候選人未提；優選方案約96億",
+    "no",
+    "候選人未提（參考：優選方案約96億）",
     "https://www.ctee.com.tw/news/20251111701782-431401"
    ],
    "timeline": [
-    "partial",
-    "候選人未提；核定後6年內完工",
+    "no",
+    "候選人未提（參考：核定後6年內完工）",
     "https://www.ctee.com.tw/news/20251111701782-431401"
    ],
    "funding": [
-    "partial",
-    "候選人未提；公路局計畫"
+    "no",
+    "候選人未提（參考：公路局計畫）"
    ],
    "authority": [
     "no",
@@ -1794,8 +1794,8 @@
     "未提及"
    ],
    "funding": [
-    "partial",
-    "候選人未提；國道工程屬中央"
+    "no",
+    "候選人未提（參考：國道工程屬中央）"
    ],
    "authority": [
     "no",
@@ -1813,18 +1813,18 @@
    "i": 4,
    "title": "增設造橋交流道",
    "amount": [
-    "partial",
-    "候選人未提；中央核定25.95億",
+    "no",
+    "候選人未提（參考：中央核定25.95億）",
     "https://www.ey.gov.tw/Page/9277F759E41CCD91/ff243cb7-7965-47af-be9d-26fa85ff9523"
    ],
    "timeline": [
-    "partial",
-    "候選人未提；官方預計2029年底完工",
+    "no",
+    "候選人未提（參考：官方預計2029年底完工）",
     "https://www.ey.gov.tw/Page/9277F759E41CCD91/ff243cb7-7965-47af-be9d-26fa85ff9523"
    ],
    "funding": [
-    "partial",
-    "候選人未提；中央全額支應",
+    "no",
+    "候選人未提（參考：中央全額支應）",
     "https://www.ey.gov.tw/Page/9277F759E41CCD91/ff243cb7-7965-47af-be9d-26fa85ff9523"
    ],
    "authority": [

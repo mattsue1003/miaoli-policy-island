@@ -199,6 +199,8 @@ button{font:inherit;color:inherit;cursor:pointer}
 .colhead{font-family:var(--f-display);font-weight:700;font-size:18px;padding:6px 10px;border-radius:10px;color:#fff}
 .colhead.chen{background:var(--chen)} .colhead.chung{background:var(--chung)}
 .empty{font-size:13px;color:var(--ink-2);padding:12px;border:1px dashed var(--line);border-radius:12px;margin-top:8px;line-height:1.6}
+.backbtn{display:inline-flex;align-items:center;gap:4px;border:0;background:var(--ink);color:var(--paper);font-size:13px;font-weight:700;padding:7px 12px;border-radius:999px;margin:0 0 10px}
+.backbtn:hover{opacity:.88}
 .jump{border:0;background:transparent;color:var(--gold);font-size:12.5px;padding:0;margin-top:10px;text-decoration:underline}
 
 .foot{position:absolute;left:max(16px,env(safe-area-inset-left,0px));bottom:calc(10px + env(safe-area-inset-bottom,0px));right:380px;
@@ -1620,7 +1622,7 @@ function buildLabels(){
   for(const t of tiles){
     const el = document.createElement('button'); el.className = 'tag '+t.key; el.tabIndex = -1;
     el.innerHTML = `<b>${String(t.ti+1).padStart(2,'0')}</b><span>${esc(t.theme.name.replace(/（.*?）/g,''))}${isRecord(t.theme)?'<em class="rk">施政紀錄</em>':''}</span>`; el.title = t.theme.name;
-    el.onclick = () => selectTheme(t.ci, t.ti); labelsEl.appendChild(el); t.label = el;
+    el.onclick = () => { back = null; selectTheme(t.ci, t.ti); }; labelsEl.appendChild(el); t.label = el;
   }
   islands.forEach((isl, ci) => { const c = DATA.candidates[ci]; const el = document.createElement('div');
     el.className = 'isle-name '+KEYS[ci]; el.innerHTML = `${esc(c.name)}<small>${esc(c.party)}</small>`; labelsEl.appendChild(el); isl.label = el; });
@@ -1671,8 +1673,16 @@ function selectCat(cat, fly=true){
     else flyTo(new THREE.Vector3(c.x, 0, c.z), isPhone()?26:24, .85); }
   renderCatCard(cat); markRows();
 }
-function clearSel(){ state = {mode:null}; highlight(null); $('#card').hidden = true; markRows(); }
+function clearSel(){ back = null; state = {mode:null}; highlight(null); $('#card').hidden = true; markRows(); }
 
+/* ---------- one-step back navigation ---------- */
+let back = null;
+const BACK_LABEL = {board:'回到政見對照表', cat:'回到領域對照', theme:'回到上一個主題'};
+const backBtn = () => back ? `<button class="backbtn" id="backbtn">← 上一頁・${BACK_LABEL[back.type]}</button>` : '';
+function goBack(){ const b = back; back = null; if(!b) return;
+  if(b.type === 'board'){ openBoard('table'); requestAnimationFrame(() => $('#board-body').scrollTop = b.scroll || 0); }
+  else if(b.type === 'cat') selectCat(b.cat);
+  else if(b.type === 'theme') selectTheme(b.ci, b.ti); }
 /* ---------- cards ---------- */
 /* links that open the source page scrolled to (and highlighting) the quoted passage */
 function fragHref(url, quote){ quote = quote || DATA.quotes?.[url]; if(!url || !quote) return url;
@@ -1700,7 +1710,7 @@ function renderThemeCard(ci, ti){
   const c = DATA.candidates[ci], th = c.themes[ti], key = KEYS[ci];
   const other = DATA.candidates[1-ci].themes.map((x,i)=>[x,i]).filter(([x])=>x.category===th.category);
   $('#card').classList.remove('wide');
-  $('#card-content').innerHTML = `
+  $('#card-content').innerHTML = `${backBtn()}
     <div class="eyebrow" style="color:var(--${key})">${esc(c.name)} · ${String(ti+1).padStart(2,'0')} / ${c.themes.length}</div>
     <h3>${esc(th.name)}</h3>
     <p class="lede"><span class="chip">${esc(th.category)}</span><span class="chip">${th.items.length} 個細項</span>${isRecord(th)?'<span class="chip">已實施／施政紀錄</span>':''}</p>
@@ -1715,12 +1725,15 @@ function renderCatCard(cat){
     return `<div><div class="colhead ${KEYS[ci]}">${esc(c.name)}</div>${ ths.length ? ths.map(([x,i]) =>
       `<button class="jump" style="color:var(--${KEYS[ci]});text-decoration:none;font-weight:700;font-size:14px" data-ci="${ci}" data-ti="${i}">${String(i+1).padStart(2,'0')} ${esc(x.name)} ›</button>${x.items.map(itemHTML).join('')}`).join('')
       : `<div class="empty">在公開政見與報導中，暫未找到這位候選人針對「${esc(cat)}」的具體主張。</div>` }</div>`; };
-  $('#card-content').innerHTML = `<div class="eyebrow" style="color:var(--gold)">領域對照</div><h3>${esc(cat)}</h3>
+  $('#card-content').innerHTML = `${backBtn()}<div class="eyebrow" style="color:var(--gold)">領域對照</div><h3>${esc(cat)}</h3>
     <p class="lede">同一個領域，兩座島各自的主張。金色標籤「施政紀錄」是現任縣長已推動的政策，不是新承諾。</p><div class="cols">${col(0)}${col(1)}</div>`;
   $('#card').hidden = false; $('#card-content').scrollTop = 0;
 }
-$('#card-content').addEventListener('click', e => { const b = e.target.closest('.jump'); if(!b) return;
-  if(b.dataset.cat) selectCat(b.dataset.cat); else selectTheme(+b.dataset.ci, +b.dataset.ti); });
+$('#card-content').addEventListener('click', e => {
+  if(e.target.closest('#backbtn')){ goBack(); return; }
+  const b = e.target.closest('.jump'); if(!b) return;
+  if(b.dataset.cat){ back = state.mode === 'theme' ? {type:'theme', ci:state.ci, ti:state.ti} : null; selectCat(b.dataset.cat); }
+  else { back = state.mode === 'cat' ? {type:'cat', cat:state.cat} : null; selectTheme(+b.dataset.ci, +b.dataset.ti); } });
 $('#card-close').onclick = clearSel;
 
 /* ---------- full comparison table + issue analysis (board) ---------- */
@@ -1786,7 +1799,7 @@ function renderIssue(i){
 $('#board').addEventListener('click', e => {
     const bo = e.target.closest('[data-both]'); if(bo){ onlyBoth = bo.dataset.both === '1'; renderTable(); return; }
   const is = e.target.closest('[data-issue]'); if(is){ renderIssue(+is.dataset.issue); $('#board-body').scrollTop = 0; return; }
-  const c = e.target.closest('.ci'); if(c){ closeBoard(); selectTheme(+c.dataset.ci, +c.dataset.ti); } });
+  const c = e.target.closest('.ci'); if(c){ back = {type:'board', scroll:$('#board-body').scrollTop}; closeBoard(); selectTheme(+c.dataset.ci, +c.dataset.ti); } });
 
 /* ---------- sidebar ---------- */
 let tab = 'cmp';
@@ -1816,7 +1829,7 @@ function renderTree(){
 }
 function markRows(){ document.querySelectorAll('#tree .row').forEach(r => r.classList.toggle('on',
   (state.mode==='cat' && r.dataset.cat===state.cat) || (state.mode==='theme' && +r.dataset.ci===state.ci && +r.dataset.ti===state.ti))); }
-$('#tree').addEventListener('click', e => { const b = e.target.closest('button'); if(!b) return;
+$('#tree').addEventListener('click', e => { const b = e.target.closest('button'); if(!b) return; back = null;
   if(b.dataset.board){ openBoard('table'); return; } if(b.dataset.issueOpen != null){ openBoard('issue', +b.dataset.issueOpen); return; }
   if(b.dataset.cat) selectCat(b.dataset.cat); else selectTheme(+b.dataset.ci, +b.dataset.ti);
   if(isPhone()) $('#sidebar').classList.add('min'); });
@@ -1866,7 +1879,7 @@ renderer.domElement.addEventListener('pointerleave', () => { hovered = null; tip
 let tipTimer;
 renderer.domElement.addEventListener('pointerup', e => {
   if(!down || Math.hypot(e.clientX-down[0], e.clientY-down[1]) > 6) return;
-  const o = hitAt(e); if(o?.userData.tile) selectTheme(o.userData.tile.ci, o.userData.tile.ti);
+  const o = hitAt(e); if(o?.userData.tile){ back = null; selectTheme(o.userData.tile.ci, o.userData.tile.ti); }
   else if(o?.userData.special){ showTip(e, o.userData.special); clearTimeout(tipTimer); tipTimer = setTimeout(() => tip.hidden = true, 2200); }
 });
 
