@@ -1061,6 +1061,57 @@ const SCENES = {
     person(g, -.2, .3, {role:'inspector', magnifier:true, mood:'o', walk:a => [-.2+Math.sin(a)*.35, .25], speed:.25}); person(g, -.55, .05, {role:'housewife', eth:'minnan', mood:'smile', rot:.3});
   },
 
+  hakka_c(g){ // 客家發展中心、母語、客英雙語、伯公照護站
+    const hk = new THREE.Group(); hk.position.set(-.3,0,-.4);
+    hk.add(mesh(rbox(.95,.4,.3,.04), 0xc8644a, 0,.2,-.25)); const r0 = mesh(prism(.4,.2,1.03), 0x6b6f78, 0,.4,-.25); r0.rotation.y = Math.PI/2; hk.add(r0);
+    for(const s of [-1,1]){ hk.add(mesh(rbox(.26,.32,.5,.04), 0xc8644a, s*.36,.16,.12)); hk.add(mesh(prism(.34,.17,.55), 0x6b6f78, s*.36,.32,.12)); }
+    hk.add(mesh(rbox(.46,.02,.46,.02), 0xe0d8cc, 0,.01,.12)); g.add(hk);
+    const cloth = mesh(rbox(.42,.26,.02,.02), 0xe8475f, .78,.62,-.55); g.add(cloth); g.add(mesh(cyl(.012,.012,.78,6), PAL.wood, .55,.39,-.55)); g.add(mesh(cyl(.012,.012,.78,6), PAL.wood, 1.0,.39,-.55));
+    const rr = rng(13); for(let i=0;i<9;i++) g.add(mesh(sph(.022,8,6), rr()<.5?0xffc0d0:0x8fd06a, .6+rr()*.36,.52+rr()*.2,-.535));
+    shrine(g, .8, .45, -.5);
+    person(g, -.6, .55, {eth:'hakka', elder:true, bun:true, mood:'laugh', rot:.6}); person(g, -.25, .65, {role:'student', mood:'happy', rot:2.6}); person(g, .1, .7, {role:'student', mood:'laugh', walk:ring(.3,.12,-.1,.7), speed:.5});
+  },
+  heritage(g){ // 老屋小壞快修、修復技藝青年、地方故事
+    const old = new THREE.Group(); old.position.set(-.3,0,-.4);
+    old.add(mesh(rbox(.9,.5,.5,.05), 0xb87a5a, 0,.25,0)); const rf = mesh(prism(.62,.3,.98), 0x5b4a3e, 0,.5,0); rf.rotation.y = Math.PI/2; old.add(rf);
+    old.add(mesh(rbox(.2,.28,.03,.02), 0x6a4a30, 0,.14,.255)); old.add(mesh(rbox(.18,.14,.03,.02), winMat, -.28,.28,.255)); old.add(mesh(rbox(.18,.14,.03,.02), winMat, .28,.28,.255));
+    for(const x of [-.5,.5]) for(const z of [-.3,.3]) old.add(mesh(cyl(.012,.012,.8,6), 0xffc83d, x,.4,z)); old.add(mesh(rbox(1.04,.03,.04,.01), 0xffc83d, 0,.55,.3)); g.add(old);
+    person(g, .2, -.05, {role:'worker', mood:'grin', rot:-.6});
+    g.add(mesh(rbox(.3,.04,.2,.02), PAL.wood, .55,.25,.45)); for(const x of [.43,.67]) g.add(mesh(cyl(.015,.015,.25,6), PAL.wood, x,.12,.45)); book(g, .55, .29, .45, 0xf28b7d, .2, .04, .14);
+    person(g, .55, .8, {elder:true, eth:'minnan', bun:false, mood:'laugh', rot:Math.PI}); person(g, .25, .55, {role:'student', mood:'o', rot:.9}); person(g, .85, .55, {role:'student', mood:'happy', rot:-.9});
+  },
+  animals(g){ // 寵物運動公園、收容所、獸鋏查緝
+    for(let i=0;i<10;i++){ const a = i/10*Math.PI*2, x = Math.cos(a)*.62+.25, z = Math.sin(a)*.5+.2; g.add(mesh(cyl(.018,.018,.22,6), 0xffffff, x,.11,z)); }
+    ellipseRing(g, .62, .5, .03, 0xffffff, .2); const lawn = mesh(geo('pp', () => { const c = new THREE.CircleGeometry(.6,24); c.rotateX(-Math.PI/2); return c; }), 0x9fdc7a, .25,.012,.2); lawn.scale.z = .82; g.add(lawn);
+    for(const [x,z,col] of [[.1,.1,0xd9a35a],[.45,.35,0x2b2b2b],[.3,-.1,0xf3e6d4]]){ const dg = dog(g, x, z, Math.random()*6, col); movers.push({obj:dg, path:ring(.32,.22,.25,.2), speed:.6+Math.random()*.3, t:x*9, hop:12}); }
+    building(g, -.75, -.5, .6, .42, .45, 0xfff5e4, {gable:0x8fd8b9, door:0x8fd8b9, rows:1, cols:2});
+    cat(g, -.85, .2, .6, 0xf4a85e); cat(g, -.6, .45, -.4, 0x6b6f78);
+    person(g, .25, .85, {role:'inspector', mood:'smile', rot:Math.PI}); person(g, -.3, .65, {mood:'happy', rot:.4});
+  },
+  playground(g){ // 十分鐘遊戲圈、公園降溫、極限運動
+    const sl = new THREE.Group(); sl.position.set(-.45,0,-.35); sl.rotation.y = .4;
+    sl.add(mesh(rbox(.3,.5,.3,.05), 0xffd36e, 0,.25,-.2)); sl.add(mesh(cone(.22,.25,4), 0xf28b7d, 0,.62,-.2)); const sd = mesh(rbox(.24,.04,.7,.03), 0x8fc7ff, 0,.25,.2); sd.rotation.x = .6; sl.add(sd); g.add(sl);
+    const sw = new THREE.Group(); sw.position.set(.5,0,-.45); for(const x of [-.3,.3]) sw.add(mesh(cyl(.025,.025,.7,8), 0xff8a8a, x,.35,0)); const bar = mesh(cyl(.025,.025,.62,8), 0xff8a8a, 0,.7,0); bar.rotation.z = Math.PI/2; sw.add(bar);
+    const seat = new THREE.Group(); seat.position.y = .7; seat.userData.dyn = true; seat.add(mesh(cyl(.005,.005,.5,4), 0x555555, 0,-.25,0)); seat.add(mesh(rbox(.16,.03,.1,.01), 0x5b8def, 0,-.5,0)); sw.add(seat); g.add(sw);
+    tickers.push((dt,t) => seat.rotation.x = Math.sin(t*2.2)*.5);
+    const ramp = mesh(geo('qp', () => new THREE.CylinderGeometry(.3,.3,.6,16,1,false,0,Math.PI/2)), 0xbfc5ce, .55,.0,.4); ramp.rotation.z = Math.PI/2; ramp.rotation.y = Math.PI; g.add(ramp);
+    puffTree(g, -.8, .5, 1.15); puffTree(g, -.2, .8, 1.0);
+    for(let i=0;i<3;i++) person(g, -.1, .2, {role:'student', mood:['laugh','happy','grin'][i], walk:ring(.35,.2,-.05,.2), speed:.7, t:i*2.1});
+    person(g, .6, .85, {mood:'smile', bun:true, rot:Math.PI});
+  },
+  farmwork(g){ // 農業移工統籌平台
+    for(let i=0;i<4;i++){ g.add(mesh(rbox(1.5,.03,.3,.04), 0x9fd8c8, -.15,.015,-.75+i*.35)); for(let j=0;j<7;j++) g.add(mesh(cone(.03,.15,5), 0x5fbf6a, -.8+j*.2,.09,-.75+i*.35)); }
+    house(g, .85, .55, {wall:0xfff5e4, roof:0x8fd8b9, s:.85, rot:-.5});
+    person(g, -.4, .55, {role:'farmer', eth:'newcomer', mood:'laugh', walk:a => [-.4+Math.sin(a)*.4, .6], speed:.25});
+    person(g, .2, .6, {role:'farmer', mood:'smile', rot:-.4}); person(g, .4, .25, {hat:'cap', capCol:0x2e9e5b, mood:'happy', laptop:true, rot:-1.2});
+  },
+  housing(g){ // 社宅、大矽谷公益信託、親子館
+    building(g, -.45, -.4, .55, 1.25, .45, 0xfde8d4, {roof:0xf28b7d, rows:4, cols:2}); building(g, .2, -.55, .5, .95, .4, 0xe8f6ee, {roof:0x8fd8b9, rows:3, cols:2});
+    for(let i=0;i<3;i++) g.add(mesh(rbox(.18,.04,.08,.02), 0x6cbf5f, -.45-.12+i*.12, 1.27, -.3));
+    building(g, .65, .35, .55, .42, .45, 0xfff0f5, {gable:0xffb3c7, door:0xff9ab5, rows:1, cols:2, rot:-.5});
+    stroller(g, ring(.35,.15,-.2,.6), 0, .3, 0x9ccfff, {eth:'hakka', mood:'happy'});
+    person(g, -.75, .45, {mood:'laugh', laptop:true, rot:.8});
+  },
   /* 鍾東錦 */
   parkexpand(g){ // 擴編園區、育成、零售市場
     building(g, -.45, -.4, .8, .6, .6, 0xe7f1fb, {roof:0x5b6170, rows:2, cols:4}); building(g, .2, -.6, .5, .9, .4, 0xcfe6ff, {roof:0x8fd8b9, rows:3, cols:2});
@@ -1464,6 +1515,12 @@ const SIGNS = {
   eldertaxi: g => { textSign(g, '農會', -.3, .5, -.25+.236, .2, .09, {bg:'#2e9e5b', border:false}); postSign(g, '關懷據點', .85, -.15, -.4, {bg:'#ff8fb1', w:.45}); },
   lunch: g => { frontSign(g, '免費營養午餐', -.35, -.6, .4, .38, .66, 0, {bg:'#d9534f', h:.12}); },
   youbike: g => { frontSign(g, 'YouBike', .15, -.72, .16, .4, .18, 0, {bg:'#f08c00', h:.08, border:false}); textSign(g, '苗栗幣', .75+Math.sin(-.5)*.04, .6, .2+Math.cos(-.5)*.04, .26, .08, {rot:-.5, bg:'#1d6fd0', border:false}); postSign(g, '2027 台灣燈會', -.45, .8, 0, {bg:'#c0392b', w:.62}); },
+  hakka_c: g => { textSign(g, '客家發展中心', -.3, .3, -.4-.25+.165, .52, .09, {bg:'#2f4f8f'}); postSign(g, '客英雙語校園', -1.05, .2, .6, {bg:'#2e9e5b', w:.56}); postSign(g, '伯公照護站', .95, 1.0, -.5, {bg:'#c0392b', w:.5}); },
+  heritage: g => { textSign(g, '老屋快修中', -.3, .62, -.4+.27, .42, .09, {bg:'#7a4a2a'}); postSign(g, '地方故事館', 1.05, -.1, -.8, {bg:'#c56a2a', w:.48}); },
+  animals: g => { postSign(g, '寵物運動公園', .25, -.55, 0, {bg:'#2e9e5b', w:.6}); frontSign(g, '動物收容所', -.75, -.5, .45, .36, .5, 0, {bg:'#2bb3a8', h:.1}); },
+  playground: g => { postSign(g, '十分鐘遊戲圈', -1.0, .1, .6, {bg:'#f08c00', w:.6}); postSign(g, '極限運動場', 1.1, .7, -.7, {bg:'#5b6170', w:.5}); },
+  farmwork: g => { postSign(g, '農業移工服務', .95, -.1, -.8, {bg:'#2e9e5b', w:.56}); },
+  housing: g => { textSign(g, '青年社宅', -.45, 1.0, -.4+.24, .38, .09, {bg:'#c0392b'}); frontSign(g, '旗艦親子館', .65, .35, .45, .36, .5, -.5, {bg:'#ff8fb1', h:.1}); },
 };
 const SPECIAL_SIGN = {
   '大湖草莓': [[-.6,.5,.3,'大湖草莓'],[.95,-.7,-.4,'草莓溫室']], '後龍西瓜': [[.95,-.8,-.5,'後龍西瓜'],[.95,-.5,-.6,'西瓜直售']],

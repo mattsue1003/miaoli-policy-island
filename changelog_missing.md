@@ -1,0 +1,64 @@
+# 政見補漏紀錄（2026-10-27）
+
+- 新增 陳品安｜生育津貼與栗寶卡｜臨托每年240小時（2026-09-18，https://udn.com/news/story/124652/9762943）
+- 新增 陳品安｜生育津貼與栗寶卡｜公幼延托到晚上6點（2026-09-18，https://udn.com/news/story/124652/9762943）
+- 新增 陳品安｜投資苗栗（青年）｜青年老屋修繕補助50萬（2026-09-28，https://udn.com/news/story/124652/9781166）
+- 新增 陳品安｜投資苗栗（青年）｜苗栗天使基金（2026-09-28，https://udn.com/news/story/124652/9781166）
+- 新增 陳品安｜投資苗栗（青年）｜青年參與式預算（2026-09-28，https://udn.com/news/story/124652/9781166）
+- 新增 陳品安｜人本交通與偏鄉接駁｜環市公車與彈性小巴（2026-09-28，https://udn.com/news/story/124652/9781166）
+- 新增 陳品安｜教育與人才培育｜八大行業距校200公尺（2026-09-28，https://udn.com/news/story/124652/9781166）
+- 新增 陳品安｜苗栗未來基金與兒少專戶｜零基預算與財政透明（2026-09-28，https://udn.com/news/story/124652/9781166）
+- 新增 陳品安｜教育與人才培育｜初任教師租屋津貼3000（2026-09-28，https://news.ltn.com.tw/news/politics/breakingnews/5588505）
+- 新增 陳品安｜教育與人才培育｜導師費與行政獎勵加發（2026-09-28，https://news.ltn.com.tw/news/politics/breakingnews/5588505）
+- 新增 陳品安｜教育與人才培育｜教師每年6次心理諮商（2026-09-28，https://news.ltn.com.tw/news/politics/breakingnews/5588505）
+- 新增 陳品安｜教育與人才培育｜特教心評人力與加給（2026-09-28，https://news.ltn.com.tw/news/politics/breakingnews/5588505）
+- 新增 陳品安｜教育與人才培育｜調整學區降低班級人數（2026-09-28，https://news.ltn.com.tw/news/politics/breakingnews/5588505）
+- 新增 陳品安｜教育與人才培育｜四年教育資源趕上全國（2026-09-28，https://news.ltn.com.tw/news/politics/breakingnews/5588505）
+- 新增 陳品安｜客家四大行動｜設客家發展中心（2026-10-18，https://news.ltn.com.tw/news/politics/breakingnews/5610435）
+- 新增 陳品安｜客家四大行動｜苗栗縣母語自治條例（2026-10-19，https://news.ltn.com.tw/news/life/paper/1775135）
+- 新增 陳品安｜客家四大行動｜客英雙語校園（2026-10-18，https://news.ltn.com.tw/news/politics/breakingnews/5610435）
+- 新增 陳品安｜客家四大行動｜青年傳藝計畫（2026-10-18，https://news.ltn.com.tw/news/politics/breakingnews/5610435）
+- 新增 陳品安｜客家四大行動｜客庄與都會中小學結盟（2026-10-19，https://news.ltn.com.tw/news/life/paper/1775135）
+- 新增 陳品安｜客家四大行動｜伯公照護站升級（2026-10-19，https://news.ltn.com.tw/news/life/paper/1775135）
+- 新增 陳品安｜文化資產五大行動｜地方故事採集與教材（2026-09-20，https://n.yam.com/Article/20260920524422）
+- 新增 陳品安｜文化資產五大行動｜文資地方共創經營（2026-09-20，https://n.yam.com/Article/20260920524422）
+- 新增 陳品安｜文化資產五大行動｜企業參與文資單一窗口（2026-09-20，https://n.yam.com/Article/20260920524422）
+- 新增 陳品安｜文化資產五大行動｜老屋小壞快修（2026-09-20，https://n.yam.com/Article/20260920524422）
+- 新增 陳品安｜文化資產五大行動｜修復技藝青年有薪學習（2026-09-20，https://n.yam.com/Article/20260920524422）
+- 新增 陳品安｜文化資產五大行動｜文資治理公開平台（2026-09-20，https://n.yam.com/Article/20260920524422）
+- 新增 陳品安｜動物友善六大行動｜南北兩區寵物運動公園（2026-08-26，https://today.line.me/tw/v3/article/KwVmR50）
+- 新增 陳品安｜動物友善六大行動｜跨局處嚴查獸鋏（2026-08-26，https://today.line.me/tw/v3/article/KwVmR50）
+- 新增 陳品安｜動物友善六大行動｜虐待非法繁殖終身禁養（2026-08-26，https://today.line.me/tw/v3/article/KwVmR50）
+- 新增 陳品安｜動物友善六大行動｜改善收容與動保人員待遇（2026-08-26，https://today.line.me/tw/v3/article/KwVmR50）
+- 新增 陳品安｜動物友善六大行動｜24小時寵物資訊平台（2026-08-26，https://today.line.me/tw/v3/article/KwVmR50）
+- 新增 陳品安｜遊戲宜居苗栗｜十分鐘遊戲圈（2026-09-22，https://news.ltn.com.tw/news/Miaoli/breakingnews/5582658）
+- 新增 陳品安｜遊戲宜居苗栗｜公園降溫計畫（2026-09-22，https://news.ltn.com.tw/news/Miaoli/breakingnews/5582658）
+- 新增 陳品安｜遊戲宜居苗栗｜青少年極限運動空間（2026-09-22，https://news.ltn.com.tw/news/Miaoli/breakingnews/5582658）
+- 新增 陳品安｜農業移工與在地｜農業移工統籌平台（2026-08-16，https://news.ltn.com.tw/news/politics/breakingnews/5541411）
+- 新增 陳品安｜城鄉均衡與都市發展｜土資場依需求審慎控管（2026-07-07，https://news.ltn.com.tw/news/politics/breakingnews/5496689）
+- 新增 鍾東錦｜經濟永續（白皮書）｜苗中/苗北/苗南三區藍圖（2026-09-13，https://www.cna.com.tw/news/aipl/202609130197.aspx）
+- 新增 鍾東錦｜貼心醫養｜關懷據點餐費補助加碼（2026-09-03，https://www.nownews.com/news/6871825）
+- 新增 鍾東錦｜貼心醫養｜敬老金視財政逐年調高（2026-09-03，https://udn.com/news/story/124652/9731642）
+- 新增 鍾東錦｜族群與家庭服務｜延長生育家庭社宅補助（2026-09-03，https://www.nownews.com/news/6871825）
+- 新增 鍾東錦｜書香傳承（教育）｜高鐵特區旗艦親子館（2026-09-03，https://www.nownews.com/news/6871825）
+- 新增 鍾東錦｜書香傳承（教育）｜每選區一公立托育中心（2026-09-29，https://cnews.com.tw/237260929a06/）
+- 新增 鍾東錦｜經濟永續（白皮書）｜苗栗人優先就業（2026-09-03，https://www.nownews.com/news/6871825）
+- 新增 鍾東錦｜宜居安家｜大矽谷公益信託基金（2026-09-03，https://www.nownews.com/news/6871825）
+- 新增 鍾東錦｜便捷交通・歸鄉之路｜幸福小黃2.0 AI調度（2026-09-03，https://www.nownews.com/news/6871825）
+- 新增 鍾東錦｜族群與家庭服務｜客家文化數位轉型（2026-09-03，https://www.nownews.com/news/6871825）
+- 新增 鍾東錦｜依山傍海（觀光文化）｜全縣YouBike山水慢遊網（2026-09-03，https://www.nownews.com/news/6871825）
+- 新增 鍾東錦｜貼心醫養｜引進醫學中心資源（2026-09-03，https://www.nownews.com/news/6871825）
+- 新增 鍾東錦｜便捷交通・歸鄉之路｜竹南頭份新雙城配套（2026-09-03，https://www.nownews.com/news/6871825）
+- 新增 鍾東錦｜便捷交通・歸鄉之路｜頭份園區聯外路網拓寬（2026-10-03，https://news.ltn.com.tw/news/politics/breakingnews/5594549）
+- 新增 鍾東錦｜書香傳承（教育）｜雙語科技教育（2026-10-03，https://news.ltn.com.tw/news/politics/breakingnews/5594549）
+- 新增 鍾東錦｜便捷交通・歸鄉之路｜苑裡偏鄉交通平權（2026-10-03，https://news.ltn.com.tw/news/politics/breakingnews/5594549）
+- 新增 鍾東錦｜農業冷鏈｜通霄海水養殖專區（2026-10-03，https://news.ltn.com.tw/news/politics/breakingnews/5594549）
+- 新增 鍾東錦｜便捷交通・歸鄉之路｜五楊高架延伸頭份（2026-06-30，https://www.nownews.com/news/6851670）
+- 新增 鍾東錦｜書香傳承（教育）｜爭取頂大學士後學院（2025-12-16，https://udn.com/news/story/124678/9205131）
+- 新增 鍾東錦｜書香傳承（教育）｜營養午餐升級（2026-10-03，https://news.ltn.com.tw/news/politics/breakingnews/5594549）
+- 新增 鍾東錦｜便捷交通・歸鄉之路｜大新竹輕軌銜接竹南頭份（2026-01-06，https://udn.com/news/story/7324/9248600）
+- 更新 陳品安｜一鄉鎮一公托：4年內公托名額翻倍（udn 9762943）
+- 更新 陳品安｜65歲以上健保費補助：財源為縣府自有預算（自由 1775010）
+- 更新 陳品安｜青年創業貸款、小校：補充9月版本內容
+- 更新 鍾東錦｜造橋交流道、核心醫療園區、大千竹南分院、擴大園區：補充連任政見內容
+- 標示 鍾東錦｜一投資一專案、陽明交大加速器：出處為縣府廣告
