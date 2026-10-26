@@ -1826,7 +1826,7 @@ function activity(){
   const items = ci => DATA.candidates[ci].themes.flatMap(t => t.items), avg = ci => { const xs = items(ci).map(chkScore).filter(x => x != null); return xs.length ? xs.reduce((s,x)=>s+x,0)/xs.length : 0; };
   return { total: rows.length, chen: rows.filter(r => r.chen.length).length, chung: rows.filter(r => r.chung.length).length,
     both: rows.filter(r => r.chen.length && r.chung.length).length, onlyChen: rows.filter(r => r.chen.length && !r.chung.length).length, onlyChung: rows.filter(r => !r.chen.length && r.chung.length).length,
-    nChen: items(0).length, nChung: items(1).length, avgChen: avg(0), avgChung: avg(1) };
+    nChen: items(0).length, nChung: items(1).length, avgChen: avg(0), avgChung: avg(1), cnt: (ci, k) => items(ci).filter(it => it.chk && !isRecItem(it) && it.chk[k]?.[0] === 'yes').length };
 }
 function statRow(label, a, b, max, fmt = x => x){
   const w = x => Math.max(2, Math.round(x / (max || 1) * 100));
@@ -1840,8 +1840,12 @@ function renderTable(){
     ${statRow(`有提出政見的議題（共 ${A.total} 個）`, A.chen, A.chung, A.total)}
     ${statRow('只有自己提出的議題', A.onlyChen, A.onlyChung, Math.max(A.onlyChen, A.onlyChung))}
     ${statRow('政見細項數', A.nChen, A.nChung, Math.max(A.nChen, A.nChung))}
-    ${statRow('平均具體度（滿分 4）', A.avgChen, A.avgChung, 4, x => x.toFixed(1))}
-    <p class="note" style="padding:6px 0 0">雙方都有提出的議題 ${A.both} 個。積極度與具體度由 AI 依固定標準計算（見下方說明），不代表製作者偏好。只比較公開提出的政見，不納入現任者已執行的施政；數量多寡反映公開提出的政見多寡，不代表政策好壞。</p></section>`;
+    ${statRow('有說出具體金額或數量的政見', A.cnt(0,'amount'), A.cnt(1,'amount'), Math.max(A.nChen, A.nChung))}
+    ${statRow('有說出時程的政見', A.cnt(0,'timeline'), A.cnt(1,'timeline'), Math.max(A.nChen, A.nChung))}
+    ${statRow('有說出財源的政見', A.cnt(0,'funding'), A.cnt(1,'funding'), Math.max(A.nChen, A.nChung))}
+    ${statRow('縣府自己就能決定的政見', A.cnt(0,'authority'), A.cnt(1,'authority'), Math.max(A.nChen, A.nChung))}
+    <p class="note" style="padding:6px 0 0">多數政見未提金額、時程與財源，屬正常選舉初期現象；候選人之後補充，網站會再更新。計數只算候選人自己說出來的，媒體補充或中央原有的經費不算。</p>
+    <p class="note" style="padding:6px 0 0">雙方都有提出的議題 ${A.both} 個。積極度與各項計數由 AI 依固定標準判斷（見下方說明），不代表製作者偏好。只比較公開提出的政見，不納入現任者已執行的施政；數量多寡反映公開提出的政見多寡，不代表政策好壞。</p></section>`;
   const item = id => { const [ci,ti,ii] = id.split('.').map(Number), it = DATA.candidates[ci].themes[ti].items[ii], [tg, cls] = basisTag(it);
     return `<button class="ci" data-ci="${ci}" data-ti="${ti}"><span class="tt">${esc(it.title)}</span>${dotsHTML(it)}<span class="tg ${cls}">${tg}</span></button>`; };
   let html = '';
