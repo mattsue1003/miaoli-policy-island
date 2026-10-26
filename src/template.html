@@ -223,6 +223,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .foot{position:absolute;left:max(16px,env(safe-area-inset-left,0px));bottom:calc(10px + env(safe-area-inset-bottom,0px));right:380px;
   font-size:11px;color:var(--ink-2);pointer-events:none;background:var(--panel);padding:4px 10px;border-radius:999px;width:fit-content;max-width:calc(100% - 20px)}
 .card:not([hidden]) ~ .foot{display:none}
+.rep-link{display:inline-block;margin-left:6px;color:inherit;font-weight:700;text-decoration:underline}
 .campad{position:absolute;right:calc(376px + max(16px,env(safe-area-inset-right,0px)));bottom:calc(48px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:6px;align-items:flex-end;z-index:3}
 .cp-views,.cp-grid{background:var(--panel);border-radius:14px;box-shadow:var(--shadow);padding:4px;display:flex;gap:2px}
 .cp-grid{display:grid;grid-template-columns:repeat(3,38px);grid-template-areas:"tu zi ." "rl hm rr" "td zo .";gap:3px}
@@ -1819,7 +1820,7 @@ function openBoard(mode, arg){ boardMode = mode; $('#board').hidden = false; $('
 function closeBoard(){ $('#board').hidden = true; boardMode = null; }
 $('#board-close').onclick = closeBoard;
 addEventListener('keydown', e => { if(e.key === 'Escape' && !$('#board').hidden) closeBoard(); });
-const AI_NOTE = `<div class="ai-note">評分方式說明：本站的「具體度」「積極度」與「爭點評分卡」皆由 AI 依事先訂好的固定標準，根據公開報導逐項判斷產生，並附上每一分的依據與出處；<b>不是網站製作者的個人喜好或政治立場</b>，也不代表政策好壞。AI 判斷可能有誤，歡迎依出處檢核並回報。</div>`;
+const AI_NOTE = `<div class="ai-note">評分方式說明：本站的「具體度」「積極度」與「爭點評分卡」皆由 AI 依事先訂好的固定標準，根據公開報導逐項判斷產生，並附上每一分的依據與出處；<b>不是網站製作者的個人喜好或政治立場</b>，也不代表政策好壞。AI 判斷可能有誤，歡迎依出處檢核並回報。<a href="#" class="rep-link" onclick="window.openReport&&openReport();return false">回報錯誤或建議 ↗</a></div>`;
 const LEGEND = `${AI_NOTE}<div class="legend"><b>具體度 ●●●○</b> 只看政見本身講得多具體，共四項：有沒有<b>具體金額</b>、<b>時程</b>、<b>財源</b>，以及是否屬<b>縣府權責</b>（不需中央或其他機關點頭）。實心＝有，半實心＝部分，空心＝未提及或需他人配合。<b>不評政策好壞。</b><br><b>比較原則：</b>只比較兩位候選人公開提出的政見；現任者任內已執行的施政不列入，也不顯示執行進度，讓兩人站在同一個基準上。</div>`;
 function activity(){
   const rows = DATA.topics.flatMap(a => a.rows.map(r => ({...r, area:a.area}))).filter(r => r.chen.length || r.chung.length);
@@ -2048,3 +2049,7 @@ camera.position.set(0, 70, 90); controls.target.set(0,0,0); overview();
 renderTree(); frame();
 requestAnimationFrame(()=>requestAnimationFrame(()=>$('#loading')?.classList.add('done')));
 </script>
+<script>
+window.REPORT_CONTEXT = () => { try { const st = state || {}; if (st.mode === 'theme') { const c = DATA.candidates[st.ci], t = c.themes[st.ti]; return {item: `${st.ci}.${st.ti}`, itemName: `${c.name}｜${t.name}`}; } if (st.mode === 'cat') return {item: 'cat', itemName: `分類：${st.cat}`}; } catch (e) {} return {}; };
+</script>
+<script src="https://mattsue1003.github.io/oth-report-button/report.js" data-site="苗栗政策島" data-label="回報錯誤或建議" data-position="left" data-offset="44" data-color="#1c2b2f" defer></script>
