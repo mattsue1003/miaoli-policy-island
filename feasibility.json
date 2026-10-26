@@ -1530,35 +1530,6 @@
    "c": 1,
    "t": 1,
    "i": 0,
-   "title": "氫能示範園區",
-   "amount": [
-    "partial",
-    "白皮書無；BOT基地約1.9公頃",
-    "https://www.storm.mg/article/11088095"
-   ],
-   "timeline": [
-    "no",
-    "未提及"
-   ],
-   "funding": [
-    "yes",
-    "縣府促參BOT，華城電機投資",
-    "https://www.storm.mg/article/11088095"
-   ],
-   "authority": [
-    "yes",
-    "縣府促參案自主推動"
-   ],
-   "progress": [
-    "yes",
-    "已與華城電機簽BOT約",
-    "https://www.storm.mg/article/11088095"
-   ]
-  },
-  {
-   "c": 1,
-   "t": 1,
-   "i": 1,
    "title": "泰安地熱發電",
    "amount": [
     "no",
@@ -1584,7 +1555,7 @@
   {
    "c": 1,
    "t": 1,
-   "i": 2,
+   "i": 1,
    "title": "天花湖水庫",
    "amount": [
     "no",
@@ -1613,7 +1584,7 @@
   {
    "c": 1,
    "t": 1,
-   "i": 3,
+   "i": 2,
    "title": "西湖溪路堤共構四期",
    "amount": [
     "partial",
@@ -1642,7 +1613,7 @@
   {
    "c": 1,
    "t": 1,
-   "i": 4,
+   "i": 3,
    "title": "銅科汙水放流專管",
    "amount": [
     "partial",
@@ -1671,7 +1642,7 @@
   {
    "c": 1,
    "t": 1,
-   "i": 5,
+   "i": 4,
    "title": "土資場廣設＋先辦說明會",
    "amount": [
     "no",
@@ -3977,6 +3948,942 @@
    "authority": [
     "yes",
     "縣府自治事項，無須中央核定"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 0,
+   "t": 7,
+   "i": 11,
+   "title": "校園霸凌獨立調查制度",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "no",
+    ""
+   ],
+   "funding": [
+    "no",
+    ""
+   ],
+   "authority": [
+    "yes",
+    "縣府教育處權責"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 0,
+   "t": 7,
+   "i": 12,
+   "title": "在地食材進營養午餐",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "partial",
+    "每週至少一次"
+   ],
+   "funding": [
+    "no",
+    ""
+   ],
+   "authority": [
+    "yes",
+    "縣府可辦理"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 0,
+   "t": 4,
+   "i": 5,
+   "title": "路口工程再造",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "no",
+    ""
+   ],
+   "funding": [
+    "no",
+    ""
+   ],
+   "authority": [
+    "yes",
+    "縣道與市區道路屬縣府"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 0,
+   "t": 4,
+   "i": 6,
+   "title": "車站周邊500米人本整合",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "no",
+    ""
+   ],
+   "funding": [
+    "no",
+    ""
+   ],
+   "authority": [
+    "partial",
+    "車站周邊涉台鐵用地"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 0,
+   "t": 10,
+   "i": 4,
+   "title": "強化包租代管與租金補貼",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "no",
+    ""
+   ],
+   "funding": [
+    "no",
+    ""
+   ],
+   "authority": [
+    "partial",
+    "包租代管由中央與地方合辦"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 0,
+   "t": 3,
+   "i": 5,
+   "title": "竹南車站機車停車改善",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "no",
+    ""
+   ],
+   "funding": [
+    "no",
+    ""
+   ],
+   "authority": [
+    "partial",
+    "涉台鐵BOT與鎮公所"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 0,
+   "t": 3,
+   "i": 6,
+   "title": "與新竹桃園共同規劃輕軌",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "no",
+    ""
+   ],
+   "funding": [
+    "no",
+    ""
+   ],
+   "authority": [
+    "no",
+    "需跨縣市與中央核定"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 0,
+   "t": 2,
+   "i": 4,
+   "title": "高齡換照整合巡迴服務",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "no",
+    ""
+   ],
+   "funding": [
+    "no",
+    ""
+   ],
+   "authority": [
+    "partial",
+    "監理屬交通部，需爭取中央"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 0,
+   "t": 10,
+   "i": 5,
+   "title": "山區與原鄉供水改善",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "no",
+    ""
+   ],
+   "funding": [
+    "partial",
+    "爭取中央專案補助"
+   ],
+   "authority": [
+    "partial",
+    "自來水屬台水公司"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 0,
+   "t": 8,
+   "i": 6,
+   "title": "南庄觀光公設與接駁",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "no",
+    ""
+   ],
+   "funding": [
+    "no",
+    ""
+   ],
+   "authority": [
+    "yes",
+    "縣府與鄉公所可辦"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 0,
+   "t": 10,
+   "i": 6,
+   "title": "電塔回饋機制公開透明",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "no",
+    ""
+   ],
+   "funding": [
+    "no",
+    ""
+   ],
+   "authority": [
+    "no",
+    "回饋金由台電與國防部決定"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 0,
+   "t": 10,
+   "i": 7,
+   "title": "東興濕地解除列管活化",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "no",
+    ""
+   ],
+   "funding": [
+    "no",
+    ""
+   ],
+   "authority": [
+    "partial",
+    "解除列管需中央同意"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 0,
+   "t": 5,
+   "i": 5,
+   "title": "銅科園區周邊生活配套",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "no",
+    ""
+   ],
+   "funding": [
+    "no",
+    ""
+   ],
+   "authority": [
+    "partial",
+    "園區屬竹科管理局"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 0,
+   "t": 3,
+   "i": 7,
+   "title": "台61平交路口周邊規劃",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "no",
+    ""
+   ],
+   "funding": [
+    "no",
+    ""
+   ],
+   "authority": [
+    "yes",
+    "都市計畫屬縣府"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 0,
+   "t": 11,
+   "i": 3,
+   "title": "守望相助隊福利加倍",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "no",
+    ""
+   ],
+   "funding": [
+    "no",
+    ""
+   ],
+   "authority": [
+    "yes",
+    "縣府可編列"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 0,
+   "t": 10,
+   "i": 8,
+   "title": "苗栗市老城區活化",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "no",
+    ""
+   ],
+   "funding": [
+    "no",
+    ""
+   ],
+   "authority": [
+    "yes",
+    "縣府與市公所"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 0,
+   "t": 8,
+   "i": 7,
+   "title": "慢魚海岸與漁港升級",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "no",
+    ""
+   ],
+   "funding": [
+    "no",
+    ""
+   ],
+   "authority": [
+    "partial",
+    "漁港多屬中央管理"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 1,
+   "t": 2,
+   "i": 13,
+   "title": "高鐵苗栗站常態增班",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "partial",
+    "N700ST 2027下半年投入後"
+   ],
+   "funding": [
+    "no",
+    ""
+   ],
+   "authority": [
+    "no",
+    "班表由高鐵公司決定"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 1,
+   "t": 6,
+   "i": 10,
+   "title": "竹南親子館",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "no",
+    ""
+   ],
+   "funding": [
+    "no",
+    ""
+   ],
+   "authority": [
+    "yes",
+    "縣府可辦"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 1,
+   "t": 4,
+   "i": 9,
+   "title": "長照床位擴充與分層長照",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "no",
+    ""
+   ],
+   "funding": [
+    "no",
+    ""
+   ],
+   "authority": [
+    "partial",
+    "機構設置涉中央法規"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 1,
+   "t": 2,
+   "i": 14,
+   "title": "千萬以下路口全縣打通",
+   "amount": [
+    "partial",
+    "單案一千萬以下"
+   ],
+   "timeline": [
+    "no",
+    ""
+   ],
+   "funding": [
+    "partial",
+    "縣府與公所分攤"
+   ],
+   "authority": [
+    "yes",
+    "縣府與公所"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 1,
+   "t": 0,
+   "i": 7,
+   "title": "傳統產業規費減免",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "no",
+    ""
+   ],
+   "funding": [
+    "no",
+    ""
+   ],
+   "authority": [
+    "partial",
+    "地方規費可減免，稅賦屬中央"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 1,
+   "t": 4,
+   "i": 10,
+   "title": "爭取陽明交大設醫學院",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "no",
+    ""
+   ],
+   "funding": [
+    "no",
+    ""
+   ],
+   "authority": [
+    "no",
+    "由大學與教育部決定"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 1,
+   "t": 3,
+   "i": 2,
+   "title": "青農貸款利息補貼一半",
+   "amount": [
+    "partial",
+    "利息一半"
+   ],
+   "timeline": [
+    "no",
+    ""
+   ],
+   "funding": [
+    "partial",
+    "財政可負擔前提"
+   ],
+   "authority": [
+    "yes",
+    "縣府可編列"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 1,
+   "t": 7,
+   "i": 9,
+   "title": "國際級運動場館",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "no",
+    ""
+   ],
+   "funding": [
+    "partial",
+    "爭取經費"
+   ],
+   "authority": [
+    "partial",
+    "需中央補助"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 1,
+   "t": 8,
+   "i": 1,
+   "title": "加速各地社宅佈建",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "no",
+    ""
+   ],
+   "funding": [
+    "no",
+    ""
+   ],
+   "authority": [
+    "partial",
+    "苗栗社宅目前由中央興建"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 1,
+   "t": 0,
+   "i": 8,
+   "title": "中石化頭份廠轉型科技專區",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "no",
+    ""
+   ],
+   "funding": [
+    "no",
+    ""
+   ],
+   "authority": [
+    "no",
+    "私人土地，縣府僅能協助"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 1,
+   "t": 1,
+   "i": 5,
+   "title": "通霄電廠電力優先供苗",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "no",
+    ""
+   ],
+   "funding": [
+    "no",
+    ""
+   ],
+   "authority": [
+    "no",
+    "電力調度屬台電"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 1,
+   "t": 1,
+   "i": 6,
+   "title": "床墊拆解設備供公所",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "partial",
+    "明年編列預算"
+   ],
+   "funding": [
+    "partial",
+    "視經費許可"
+   ],
+   "authority": [
+    "yes",
+    "縣府可編列"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 0,
+   "t": 9,
+   "i": 5,
+   "title": "3年內財政自主",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "yes",
+    "3年內"
+   ],
+   "funding": [
+    "no",
+    ""
+   ],
+   "authority": [
+    "yes",
+    "縣府財政自主事項"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 0,
+   "t": 7,
+   "i": 13,
+   "title": "課後照顧鐘點費一致",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "no",
+    ""
+   ],
+   "funding": [
+    "no",
+    ""
+   ],
+   "authority": [
+    "yes",
+    "縣府教育處可訂定"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 0,
+   "t": 10,
+   "i": 9,
+   "title": "爭取行動監測車查異味",
+   "amount": [
+    "no",
+    ""
+   ],
+   "timeline": [
+    "no",
+    ""
+   ],
+   "funding": [
+    "partial",
+    "爭取環境部補助"
+   ],
+   "authority": [
+    "partial",
+    "設備需中央補助，執法屬縣環保局"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 0,
+   "t": 3,
+   "i": 8,
+   "title": "五楊高架延伸至頭份",
+   "amount": [
+    "no",
+    "未提金額"
+   ],
+   "timeline": [
+    "no",
+    "未提時程"
+   ],
+   "funding": [
+    "partial",
+    "屬中央高公局計畫，縣府僅爭取"
+   ],
+   "authority": [
+    "partial",
+    "主責為交通部高公局"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 0,
+   "t": 5,
+   "i": 6,
+   "title": "苗栗與美國城市交流姊妹市",
+   "amount": [
+    "no",
+    "無金額"
+   ],
+   "timeline": [
+    "no",
+    "無時程"
+   ],
+   "funding": [
+    "no",
+    "未提財源"
+   ],
+   "authority": [
+    "yes",
+    "縣府可自行締結姊妹市"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 1,
+   "t": 3,
+   "i": 3,
+   "title": "草莓四季室內栽培",
+   "amount": [
+    "no",
+    "無金額"
+   ],
+   "timeline": [
+    "no",
+    "無時程"
+   ],
+   "funding": [
+    "no",
+    "未提財源"
+   ],
+   "authority": [
+    "partial",
+    "需農會、農改場合作"
+   ],
+   "progress": [
+    "na",
+    "不列入比較"
+   ]
+  },
+  {
+   "c": 1,
+   "t": 0,
+   "i": 9,
+   "title": "新建場館動土即引進營運商",
+   "amount": [
+    "no",
+    "無金額"
+   ],
+   "timeline": [
+    "no",
+    "無時程"
+   ],
+   "funding": [
+    "no",
+    "不涉額外財源"
+   ],
+   "authority": [
+    "yes",
+    "縣府自主行政作法"
    ],
    "progress": [
     "na",
