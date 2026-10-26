@@ -1760,7 +1760,7 @@ function goBack(){ const b = back; back = null; if(!b) return;
   else if(b.type === 'theme') selectTheme(b.ci, b.ti); }
 /* ---------- cards ---------- */
 /* links that open the source page scrolled to (and highlighting) the quoted passage */
-function fragHref(url, quote){ quote = quote || DATA.quotes?.[url]; if(!url || !quote) return url;
+function fragHref(url, quote){ if(/youtu\.?be/.test(url||'')) return url; quote = quote || DATA.quotes?.[url]; if(!url || !quote) return url;
   const enc = encodeURIComponent(quote).replace(/-/g,'%2D').replace(/,/g,'%2C').replace(/&/g,'%26');
   return url + (url.includes('#') ? ':~:text=' : '#:~:text=') + enc; }
 function srcLink(url, quote, label){ if(!url) return ''; return `<a href="${esc(fragHref(url, quote))}" target="_blank" rel="noopener" title="開啟原文${quote || DATA.quotes?.[url] ? '並標示引用段落' : ''}">${esc(label || host(url))} ↗</a>`; }

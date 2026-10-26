@@ -26,6 +26,7 @@
 | `feasibility.json` | 每項政見的檢核結果與依據 |
 | `issues_deep.json` | 爭點深入分析 |
 | `changelog_social.md` | 2026-10-26 社群來源（臉書、Threads、IG、YouTube）補漏紀錄 |
+| `changelog_youtube.md` | 2026-10-26 YouTube 影片以 Gemini 聽打分析後補入的 6 條政見（逐字為 AI 聽打，非官方逐字稿；來源連結含時間點） |
 | `影片清單_待整理.md` | 相關影片 45 支，標示有無字幕 |
 | `src/` | 產生 `index.html` 的模板與 3D 場景原始碼 |
 
