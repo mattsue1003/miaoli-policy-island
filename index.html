@@ -246,9 +246,14 @@ button{font:inherit;color:inherit;cursor:pointer}
 @media (max-width:860px){
   .sidebar{top:auto;left:0;width:auto;height:46%;border-left:0;border-top:1px solid var(--line);border-radius:20px 20px 0 0;
     padding-top:6px;padding-left:max(0px,env(safe-area-inset-left,0px));transition:height .3s}
-  .sidebar.min{height:120px}
-  .sheet-handle{display:block;margin:0 auto 4px;border:0;background:transparent;padding:6px 30px}
+  .sidebar.min{height:58px;overflow:hidden}
+  .sidebar.min .side-head,.sidebar.min .side-body,.sidebar.min > :not(.sheet-handle){display:none}
+  .sheet-handle{display:flex;flex-direction:column;align-items:center;gap:4px;margin:0 auto 4px;border:0;background:transparent;padding:4px 30px;font:inherit;font-size:12px;color:var(--ink-2);cursor:pointer}
   .sheet-handle i{display:block;width:42px;height:5px;border-radius:9px;background:var(--line)}
+  .sheet-handle b{font-weight:600}
+  .sidebar.min .sheet-handle{display:flex}
+  body.sheet-min .toolbar{bottom:calc(58px + 10px)}
+  body.sheet-min .campad{bottom:calc(58px + 62px)}
   .side-head h2,.side-head p{display:none}
   .toolbar{right:max(16px,env(safe-area-inset-right,0px));left:max(16px,env(safe-area-inset-left,0px));top:auto;bottom:calc(46% + 10px)}
   .timebar span{display:none}
@@ -301,7 +306,7 @@ button{font:inherit;color:inherit;cursor:pointer}
   </nav>
 
   <aside id="sidebar" class="sidebar" aria-label="政策清單">
-    <button class="sheet-handle" id="sheet-handle" aria-label="展開或收合清單"><i></i></button>
+    <button class="sheet-handle" id="sheet-handle" aria-label="展開或收合清單"><i></i><b id="sheet-label">收合 ⌄ 看整張地圖</b></button>
     <div class="side-head">
       <div class="eyebrow">THE POLICY INDEX</div>
       <h2>同一個苗栗，兩種答案</h2>
@@ -1940,7 +1945,11 @@ document.querySelectorAll('.tabs button').forEach(b => b.onclick = () => { tab =
   document.querySelectorAll('.tabs button').forEach(x=>x.setAttribute('aria-selected', x===b)); $('#search').value=''; renderTree();
   if(tab!=='cmp') flyIsland(tab==='chen'?0:1); });
 $('#search').addEventListener('input', renderTree);
-$('#sheet-handle').onclick = () => $('#sidebar').classList.toggle('min');
+function setSheet(min){ $('#sidebar').classList.toggle('min', min); document.body.classList.toggle('sheet-min', min); $('#sheet-label').textContent = min ? '展開政策清單 ⌃' : '收合 ⌄ 看整張地圖'; }
+$('#sheet-handle').onclick = () => setSheet(!$('#sidebar').classList.contains('min'));
+{ let y0 = null; const sb = $('#sidebar');
+  sb.addEventListener('touchstart', e => { if(e.target.closest('.sheet-handle, .side-head')) y0 = e.touches[0].clientY; else y0 = null; }, {passive:true});
+  sb.addEventListener('touchend', e => { if(y0 == null) return; const dy = e.changedTouches[0].clientY - y0; if(dy > 30) setSheet(true); else if(dy < -30) setSheet(false); y0 = null; }, {passive:true}); }
 document.querySelectorAll('[data-fly]').forEach(b => b.onclick = () => { b.dataset.fly==='all' ? overview() : flyIsland(+b.dataset.fly); });
 /* camera pad */
 function camState(){ const o = camera.position.clone().sub(controls.target), d = o.length(); return {d, polar:Math.acos(Math.min(1, o.y/d)), az:Math.atan2(o.x, o.z)}; }
